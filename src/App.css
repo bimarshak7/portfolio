@@ -1,0 +1,38 @@
+body{
+	
+	
+}
+
+.container {
+  position: absolute;
+  margin-top: 5em;
+  left: 15px;
+  right: 15px;
+}
+
+.container-enter {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.container-enter-active {
+  opacity: 1;
+  transform: scale(1);
+   -webkit-transition: opacity 500ms, transform 00ms;
+}
+
+.container-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.container-exit-active {
+  opacity: 0;
+  transform: scale(0.5);
+   -webkit-transition: opacity 500ms, transform 500ms;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gochi+Hand&family=Permanent+Marker&family=Lobster&family=Architects+Daughter&display=swap');
+
+

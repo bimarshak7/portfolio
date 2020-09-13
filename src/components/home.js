@@ -68,7 +68,7 @@ function Home() {
 		<span className='am'>I am</span>
 		<span className='name'>Bimarsha Khanal.</span>
 		<div class='btm'>
-		-----Computer Engineering | Technophile | Autodidact-----
+		-----Computer Engineering | Tech Geek | Optimist-----
 		</div>
 		
 		</Styles>

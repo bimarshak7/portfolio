@@ -6,16 +6,18 @@ import Contact from './components/contact';
 import About from './components/about';
 import { Container} from 'react-bootstrap'
 import Top from './components/nav';
+import Game from './components/fun/game';
 import './App.css';
 import { CSSTransition } from 'react-transition-group'
 
 const c_url=window.location.pathname;
-const paths=['/','/about','/contact']
+const paths=['/','/about','/contact','/fun']
 const url=paths.includes(c_url)?"404":c_url;
 const routes = [
   { path: '/' , Component: Home },
   { path: '/about', Component: About },
-  { path: '/contact', Component: Contact }
+  { path: '/contact', Component: Contact },
+  { path: '/fun', Component: Game }
 ]
 
 class App extends Component {

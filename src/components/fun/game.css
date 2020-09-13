@@ -1,0 +1,38 @@
+.game{
+  display: grid;
+    justify-content: center;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: -1px;
+  margin-top: -1px;
+  text-align: center;
+  width: 80px;
+  line-height: 80px;
+  height: 80px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #123;
+  border: 3px solid aqua;   
+ }
+ 
+ .O{
+  background: blue;
+ }
+ .X{
+  background: green;
+ }
+ 
+ .row{
+  display: flex;
+ }
+
+ .info{
+  font: 2em Cursive;
+  
+ }

@@ -66,6 +66,11 @@ function Top(){
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
+            <Nav.Link>
+              <NavLink to="/fun" activeClassName='active'>Fun</NavLink>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <Nav.Link href="https://codegurkha.com" target='_blank' rel='noopener noreferrer'>Blog</Nav.Link>
           </Nav.Item>
         </Nav>

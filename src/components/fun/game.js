@@ -33,10 +33,6 @@ function Game(){
 	useEffect(() => {
 		let copy=board;
 		let turn_c=turn;
-		if(mv>8){
-  			setModal(true);
-			setInfo("It's Draw");
-  		}
 		if (turn==="O"){
 			let move=pcMove(board)
 			copy[move]="O";
@@ -45,7 +41,11 @@ function Game(){
 			setMv(mv+1);
 		}
 		
-
+		if(mv>=9){
+  			setModal(true);
+			setInfo("It's Draw");
+  		}
+		
 		if(WinCheck(copy,turn_c)){
 			setInfo(`${turn_c} is the winner!!!`);
 			setModal(true);

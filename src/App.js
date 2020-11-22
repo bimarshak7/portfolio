@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router,Route} from 'react-router-dom';
+import { HashRouter as Router,Route} from 'react-router-dom';
 import Home from './components/home';
 import NoMatch from './components/noMatch';
 import Contact from './components/contact';
@@ -12,7 +12,7 @@ import { CSSTransition } from 'react-transition-group'
 
 const c_url=window.location.pathname;
 const paths=['/','/about','/contact','/fun']
-const url=paths.includes(c_url)?"404":c_url;
+const url=paths.includes(c_url)?"/404":c_url;
 const routes = [
   { path: '/' , Component: Home },
   { path: '/about', Component: About },
@@ -35,14 +35,15 @@ class App extends Component {
                   classNames="container"
                   unmountOnExit
                 >
-                  <Container classNames='container'>
+                  <Container className='container'>
                     <Component />
                   </Container>
                 </CSSTransition>
               )}
             </Route>
           ))}
-          <Route path={url} component={NoMatch}/>
+
+          <Route path={url} exact component={NoMatch}/>
         </Router>
       </React.Fragment>
     );

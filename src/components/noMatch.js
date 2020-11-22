@@ -25,7 +25,7 @@ function NoMatch() {
 	return(
 		<Container>
 		<Style>
-		<h2>Error 404</h2>
+		<h2>Error 404 -_-</h2>
 		Page Not Found
 		<a href='/'>Home</a>
 		</Style>

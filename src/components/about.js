@@ -76,7 +76,7 @@ function Test() {
       <Card.Text>
         - Machine Learning(Python)<br/>
         - Django, RestFramework<br/>
-        - ReactJs
+        - ReactJs<br/>
         - HTML, CSS, JS
       </Card.Text>
     </Card.Body>

@@ -2,48 +2,89 @@ import React from 'react';
 import styled from 'styled-components';
 import {FaHome} from 'react-icons/fa';
 import {MdSchool} from 'react-icons/md';
-import {FaUniversity} from 'react-icons/fa';
+import {HiLightBulb} from 'react-icons/hi';
+
+import { CardDeck, Card } from 'react-bootstrap';
 const Styles=styled.div`
-  width: 80% ;
-  margin-left: auto ;
-  margin-right: auto ;
+  width: 85% ;
+  margin:auto;
+ 
   .title{
-		font:1.5em 'Permanent Marker';
-		text-align:center;
-		text-decoration: underline wavy #00ff51;
+    font:3em 'Permanent Marker';
+    text-align:center;
+    text-decoration: underline double indigo;
 	}
-   
-   .lst{
-	   	list-style:none;
-	   	font:2em 'Cursive';
-	   	background:rgba(7, 17, 64, 0.5);
-	   	padding:1vh 3vw;
-	   	margin-top:4%;
-	   	border-radius:1em 2em;
-   }
-   .lst li{
-	   	text-align:justify;
-	   	padding-top:0.8em;
+	.card-deck .card {
+    margin:25px;
+    transition: transform 0.45s ease-out;
+}
+   .card-header{
+   	font-size:1.7em;
+    font-weight: bold;
    }
 
-   @media screen and (max-width: 700px) {
-		width:100%;
-		.lst{font:1.5em 'Times New Roman'}
+.card:hover{
+  transform: scale(1.1);
+  box-shadow: rgba(185, 56, 56, 0.45) 0px 22px 50px 4px;
+}
+.card-text{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+svg{
+  float:right;
+  transform:scale(1.7);
+  color: #000;
+}
+@media screen and (max-width: 1050px) {
+  .card-deck{
+    flex-flow:column;
+  }
 }
 `
 
-function About(argument) {
+function Test() {
 	return(
 		<Styles>
 		<div className='title'>About Me</div>
-		<div className='lst'>
-		<li><span role="img" aria-label="sheep">🇳🇵</span>Nepal</li>
-		<li><FaHome/> Gandaki Province, Kaski, Pokhara</li>
-		<li><MdSchool/> High School: SOS Hermann Gmeiner School Gandaki (Applied Science)</li>
-		<li><FaUniversity/> Computer Engineering at Tribhuwan Universsity, IOE, Paschimanchal Campus</li> 
-		</div>
+		<CardDeck>
+  <Card className="mb-2" bg='success' text='light'>
+    <Card.Header>Address<FaHome/></Card.Header>
+    <Card.Body>
+      <Card.Text>
+        Pokhara, Kaski <br/>
+        Gandaki Province<br/>
+        Nepal
+      </Card.Text>
+    </Card.Body>
+  </Card>
+  <Card className="mb-2" bg='info' text='light'>
+    <Card.Header>Education<MdSchool/></Card.Header>
+    <Card.Body>
+      
+      <Card.Text>
+        - High School : SOS Hermann Gmeiner School, Gandaki<br/>
+        - Currently pursuing Undergraduate Degree in Computer Engineering at TU,IOE, Paschimanchal Campus.
+      </Card.Text>
+    </Card.Body>
+    
+  </Card>
+  <Card className="mb-1" bg='danger' text='light'>
+    <Card.Header>Skills<HiLightBulb/></Card.Header>
+    <Card.Body>
+      
+      <Card.Text>
+        - Machine Learning(Python)<br/>
+        - Django, RestFramework<br/>
+        - ReactJs
+        - HTML, CSS, JS
+      </Card.Text>
+    </Card.Body>
+  </Card>
+</CardDeck>
 		</Styles>
 		)
 }
 
-export default About;
+export default Test;
+

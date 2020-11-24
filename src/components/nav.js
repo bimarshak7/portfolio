@@ -23,7 +23,6 @@ const Styles = styled.div`
     border-bottom:3px ridge red;
   }
   .active{
-    border-radius:4px;
     border-bottom: 3px ridge cyan;
     color:white;
     

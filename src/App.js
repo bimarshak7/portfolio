@@ -1,14 +1,21 @@
-import React, { Component } from 'react';
-import { HashRouter as Router,Route} from 'react-router-dom';
+import React from 'react';
+import {
+  useLocation,
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import Home from './components/home';
 import NoMatch from './components/noMatch';
 import Contact from './components/contact';
 import About from './components/about';
+
+
 import { Container} from 'react-bootstrap'
 import Top from './components/nav';
 import Game from './components/fun/game';
 import './App.css';
-import { CSSTransition } from 'react-transition-group'
+import { CSSTransition ,TransitionGroup } from 'react-transition-group'
 
 const c_url=window.location.pathname;
 const paths=['/','/about','/contact','/fun']
@@ -20,34 +27,39 @@ const routes = [
   { path: '/fun', Component: Game }
 ]
 
-class App extends Component {
-  render() {
-    return (
-      <React.Fragment>
-      <Router>
-      <Top/>
-          {routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-              {({ match }) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={500}
-                  classNames="container"
-                  unmountOnExit
-                >
-                  <Container className='container'>
-                    <Component />
-                  </Container>
-                </CSSTransition>
-              )}
-            </Route>
-          ))}
-
-          <Route path={url} exact component={NoMatch}/>
-        </Router>
-      </React.Fragment>
-    );
-  }
+function AnimationApp() {
+  const location = useLocation();
+  return (
+    <div>
+        <Top/>
+        <TransitionGroup>
+          <CSSTransition key={location.key} timeout={500} classNames="container" unmountOnExit>
+            <Switch location={location}>
+              <Router>
+        <Container classNames='container'>
+          {routes.map(({path, Component})=>(
+            <Route key={path} path={path} exact component={Component}/>
+            ))}
+          <Route path={url} component={NoMatch}/>
+                
+      </Container>
+              </Router>
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+    </div>
+  );
+}function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="*">
+          <AnimationApp />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
+
 
 export default App;

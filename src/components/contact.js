@@ -8,46 +8,89 @@ import {AiFillRedditCircle} from 'react-icons/ai';
 import {FaStackOverflow} from 'react-icons/fa';
 
 const Styles=styled.div`
-  width: 80% ;
-  margin-left: auto ;
+  width:85%;
+  margin:4% auto ;
+  padding:5%;
   margin-right: auto ;
+  background:rgba(14, 112, 170, 0.3);
+  border-radius:36px 10px;
 	.para{
-		background:rgba(170, 14, 14, 0.3);
 		text-align:justify;
-		font:1.2em 'Permanent Marker';
+		font:2.5em 'Gochi Hand';
 		margin-top:4%;
 		mix-blend-mode: screen;
-		padding:22px;
-  		border-radius:36px 10px;
+		padding:16px;
 	}
 	.title{
-		font:2em 'Gochi Hand';
+		font:3em 'Permanent Marker';
 		text-align:center;
-		text-decoration: underline wavy #00ff51;
+		text-decoration: underline double cyan;
 	}
-	.link-list{
-		list-style:none;
-		background:rgba(5, 215, 190, 0.5);
+	
+
+.social-icons {
+		width:100%;
+    	list-style:none;
+		background:rgba(0, 0, 0, 0.5);
 		display:flex;
-		margin-top:10%;
   		justify-content:center;
-		font-size:2em;
-		border-radius:5px 28px;
-	}
-	.link-list li{
-		padding:1% 5%;
-		align-content:center;
-	}
-	.link-list a{color:white;}
-	.link-list a:hover{color:red;}
+		border-radius: 16px;
+    	font-size: 2.8em;
+}
+
+.social-icons li a {
+    padding:1% 5%;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    line-height: 70px;
+    width: 100px;
+    height: 100px
+}
+
+.social-icons li a::before,
+.social-icons li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transition: .2s linear;
+}
+
+.social-icons li:hover {
+    transform: scale(1.3);
+    color: green;
+}
+
+.social-icons li a:hover::before {
+    transform: skewX(20deg);
+    border-left: 3px solid;
+    border-right: 3px solid
+}
+
+.social-icons li a:hover::after {
+    transform: skewY(-25deg);
+    border-top: 3px solid;
+    border-bottom: 3px solid
+}
+
+li{
+	padding:1% 5%;
+}
 
 	@media screen and (max-width: 700px) {
 		width:100%;
-		.para{font-size:1.2em;}
-		.link-list{width:100%;font-size:2em;}
-		
+		padding:3%;
+		margin-left: -3% ;
+		.para{font-size:1.7em;}
+		.social-icons {
+		    font-size: 1.8em;
+		    
+		}
 }
-
 	
 `
 const social=[
@@ -63,13 +106,15 @@ function Contact() {
 		<Styles>
 		<div className='title'>Let’s Be Friends!</div>
 		<p className='para'>
-			I love connecting with people and building real communities with real human beings. So, if you have room for one more friend, here’s where you can find me…
+			I love connecting with people and building real communities with real human beings. So, if you have room for one more friend, here’s where you can find me…			
 		</p>
-			<div className='link-list'>
-				{social.map(({ icon, url }) => (
+
+		<ul class="social-icons">
+		{social.map(({ icon, url }) => (
             <li><a href={url} target='_blank' rel='noopener noreferrer'>{icon}</a></li>
           ))}
-			</div>
+        </ul>
+        
 		</Styles>
 
 		);

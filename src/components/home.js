@@ -44,7 +44,7 @@ const Styles = styled.div`
 	font:3vw 'Permanent Marker';
 	color:cyan;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	margin-top:16%;
   .btm {
     font-size:0.85em;

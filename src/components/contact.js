@@ -4,52 +4,42 @@ import {GrLinkedin} from 'react-icons/gr';
 import {MdMail} from 'react-icons/md';
 import {AiFillGithub} from 'react-icons/ai';
 import {FaTwitterSquare} from 'react-icons/fa';
-import {AiFillRedditCircle} from 'react-icons/ai';
+import {SiHackerrank} from 'react-icons/si';
 import {FaStackOverflow} from 'react-icons/fa';
+import {Row} from 'react-bootstrap';
+
 
 const Styles=styled.div`
-  width:85%;
-  margin:4% auto ;
-  padding:5%;
-  margin-right: auto ;
-  background:rgba(14, 112, 170, 0.3);
-  border-radius:36px 10px;
-	.para{
-		text-align:justify;
-		font:2.5em 'Gochi Hand';
-		margin-top:4%;
-		mix-blend-mode: screen;
-		padding:16px;
-	}
-	.title{
-		font:3em 'Permanent Marker';
-		text-align:center;
-		text-decoration: underline double cyan;
-	}
-	
-
-.social-icons {
-		width:100%;
-    	list-style:none;
-		background:rgba(0, 0, 0, 0.5);
-		display:flex;
-  		justify-content:center;
-		border-radius: 16px;
-    	font-size: 2.8em;
+  width: 85% ;
+  margin:0% auto;
+  
+  p{
+    font: 2.7rem 'Gochi Hand';
+    margin:1% 0;
+    word-spacing:18%;
+    text-indent: 50px;
+    text-align:justify;
+  }
+ 
+  .social-icons {
+    width:100%;
+    list-style:none;
+    display:flex;
+    margin: 3rem auto 1rem auto;
+    justify-content:center;
+    border-radius: 16px;
+    font-size: 2.8em;
 }
-
-.social-icons li a {
+.social-icons li a{
     padding:1% 5%;
-    color: #fff;
     position: relative;
     text-align: center;
-    line-height: 70px;
-    width: 100px;
-    height: 100px
+    line-height: 7px;
+    width: 1rem;
+    height: 1rem;
 }
-
-.social-icons li a::before,
-.social-icons li a::after {
+.social-icons li ::before,
+.social-icons li ::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -65,60 +55,64 @@ const Styles=styled.div`
     color: green;
 }
 
-.social-icons li a:hover::before {
+.social-icons li :hover::before {
     transform: skewX(20deg);
-    border-left: 3px solid;
-    border-right: 3px solid
+    border-left: 2px solid;
+    border-right: 2px solid
 }
 
-.social-icons li a:hover::after {
+.social-icons li :hover::after {
     transform: skewY(-25deg);
-    border-top: 3px solid;
-    border-bottom: 3px solid
+    border-top: 2px solid;
+    border-bottom: 2px solid
 }
 
 li{
-	padding:1% 5%;
+  padding:1% 3%;
 }
+h3{
+  text-align:left;
+  font: 2.5rem Lobster;
+  margin-top:1%;
+}
+  @media screen and (max-width: 650px) {
+    .para{font-size:1.7em;}
+    .social-icons {
+        font-size: 1.8em;   
+    }
+    p{
+    font-size: 1.4rem;
+    word-spacing:8%;
+  }
+  h3{
+  font-size: 1.5rem;
 
-	@media screen and (max-width: 700px) {
-		width:100%;
-		padding:3%;
-		margin-left: -3% ;
-		.para{font-size:1.7em;}
-		.social-icons {
-		    font-size: 1.8em;
-		    
-		}
 }
-	
 `
 const social=[
-	{icon:<AiFillGithub/>,url:'https://github.com/bimarshak7'},
-	{icon:<GrLinkedin/>,url:'https://www.linkedin.com/in/bimarsha-k-4636b6118'},
-	{icon:<FaStackOverflow/>,url:'https://stackoverflow.com/users/13677542/bimarsha-khanal'},
-	{icon:<FaTwitterSquare/>,url:'https://twitter.com/bimarshak7'},
-	{icon:<AiFillRedditCircle/>,url:'https://www.reddit.com/user/bimarshak7'},
-	{icon:<MdMail/>,url:'mailto:khanalbimarsha@gmail.com'}
-]
-function Contact() {
+  {icon:<AiFillGithub/>,url:'https://github.com/bimarshak7'},
+  {icon:<GrLinkedin/>,url:'https://www.linkedin.com/in/bimarsha-k-4636b6118'},
+  {icon:<FaStackOverflow/>,url:'https://stackoverflow.com/users/13677542/bimarsha-khanal'},
+  {icon:<FaTwitterSquare/>,url:'https://twitter.com/bimarshak7'},
+  {icon:<SiHackerrank/>,url:'https://www.hackerrank.com/khanalbimarsha7'},
+  {icon:<MdMail/>,url:'mailto:khanalbimarsha@gmail.com'}
+];
+const Contact = ()=> {
 	return(
-		<Styles>
-		<div className='title'>Let’s Be Friends!</div>
-		<p className='para'>
-			I love connecting with people and building real communities with real human beings. So, if you have room for one more friend, here’s where you can find me…			
-		</p>
-
-		<ul class="social-icons">
-		{social.map(({ icon, url }) => (
-            <li><a href={url} target='_blank' rel='noopener noreferrer'>{icon}</a></li>
+    <Row className='content' id='contact'>
+  		<Styles>
+    		<div className='title'>Contact Me</div>
+        <h3>Let's Be friends,</h3>
+    		<p>I love connecting with people and building real communities with real human beings. So, if you have room for one more friend, here’s where you can find me… 
+        </p>
+        <ul className="social-icons">
+          {social.map(({ icon, url }) => (
+          <li key={url}><a href={url} target='_blank' rel='noopener noreferrer'>{icon}</a></li>
           ))}
         </ul>
-        
-		</Styles>
-
-		);
+  		</Styles>
+    </Row>
+		)
 }
 
 export default Contact;
-

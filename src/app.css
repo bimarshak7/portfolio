@@ -1,0 +1,26 @@
+*{
+	background: #0c0c0b;
+	color: #fff;
+}
+.content{
+	border: 2px solid cyan;
+	border-radius: 2%;
+	margin:4% auto 2% auto;
+	min-height: 85vh;
+}
+
+.title{
+    font:3rem 'Permanent Marker';
+    text-align:center;
+	}
+
+@media screen and (max-width: 650px) { 
+	.title{
+    font-size:2rem;
+	}
+	.content{
+	min-height: 100%;
+}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gochi+Hand&family=Permanent+Marker&family=Lobster&family=Architects+Daughter&display=swap');

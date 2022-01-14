@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Container} from 'react-bootstrap';
 
 const Styles = styled.div`
     display: grid;
     justify-content: center;
-    margin-top:4%;
+    margin:35vh 0 10%;
     background-image: #123 url('mast.jpeg') no-repeat fixed bottom center;
-
 
 .hey{
 	font:4vw 'Permanent Marker';
@@ -43,17 +43,18 @@ const Styles = styled.div`
 .am{
 	font:3vw 'Permanent Marker';
 	color:cyan;
+	text-align:left;
 }
 @media screen and (max-width: 900px) {
-	margin-top:16%;
+	margin-top:15vh;
   .btm {
-    font-size:0.85em;
+    font-size:1.7em;
     margin-top:7%;
     width:100%;
     white-space:nowrap;
-    padding:7px 0em;
+    padding:0.1em 0em;
   }
-  .name{font-size:11vw;}
+  .name{font-size:9vw;}
   .hey{margin-bottom:5%;left:50%;font-size:5vh;}
   .how{font-size:1.5em;}
   .am{font-size:5vw} 
@@ -62,17 +63,18 @@ const Styles = styled.div`
 
 function Home() {
 	return(
-		<Styles>
+		<Container c>
+		<Styles id='home'>
 		<div className='hey'>HELLO!</div>
 		<span className='how'>How's it going?</span>
 		<span className='am'>I am</span>
 		<span className='name'>Bimarsha Khanal.</span>
-		<div class='btm'>
-		-----Computer Engineering | Tech Geek | Optimist-----
+		<div className='btm'>
+		----- Learning Mode: On 😉 -----
 		</div>
 		
 		</Styles>
-
+		</Container>
 		);
 }
 

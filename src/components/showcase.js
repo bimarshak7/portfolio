@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CardGroup, Card, Row } from 'react-bootstrap';
+import { CardGroup, Card, Row, Button } from 'react-bootstrap';
 
 const Styles=styled.div`
   width: 85% ;
@@ -49,6 +49,9 @@ function ShowCase() {
                 Nepali Handwritten Digits are classified using Artificial Neural Network.
               </Card.Text>
             </Card.Body>
+              <Button variant="dark">
+              <Card.Link target='new' href="https://github.com/bimarshak7/Nepali-Handwritten-Digit-Classification">Check Now</Card.Link>
+              </Button>
           </Card>
           <Card className="mb-2">
             <Card.Header>FullStack</Card.Header>
@@ -58,6 +61,9 @@ function ShowCase() {
                 Instagram like app using Flask and ReactJS.
               </Card.Text>
             </Card.Body>
+              <Button variant="dark">
+              <Card.Link target='new' href="https://github.com/bimarshak7/instapound">Check now</Card.Link>
+              </Button>
           </Card>
           <Card className="mb-2">
             <Card.Header>FrontEnd</Card.Header>
@@ -67,6 +73,7 @@ function ShowCase() {
                 Check IPO Result of Multiple BOIDs at once.
               </Card.Text>
             </Card.Body>
+              <Button variant="dark"><Card.Link target='new' href="https://github.com/bimarshak7/Bulk-IPO-Result">Check now</Card.Link></Button>
           </Card>
         </Row>
   		</Styles>

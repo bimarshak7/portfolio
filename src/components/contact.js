@@ -24,8 +24,8 @@ const Styles=styled.div`
   .social-icons {
     width:100%;
     list-style:none;
-    display:flex;
     margin: 3rem auto 1rem auto;
+    display:flex;
     justify-content:center;
     border-radius: 16px;
     font-size: 2.8em;
@@ -38,37 +38,13 @@ const Styles=styled.div`
     width: 1rem;
     height: 1rem;
 }
-.social-icons li ::before,
-.social-icons li ::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    left: 0;
-    top: 0;
-    transition: .2s linear;
-}
-
-.social-icons li:hover {
-    transform: scale(1.3);
-    color: green;
-}
-
-.social-icons li :hover::before {
-    transform: skewX(20deg);
-    border-left: 2px solid;
-    border-right: 2px solid
-}
-
-.social-icons li :hover::after {
-    transform: skewY(-25deg);
-    border-top: 2px solid;
-    border-bottom: 2px solid
-}
 
 li{
   padding:1% 3%;
+  transition: .2s linear;
+}
+.social-icons li:hover {
+    transform: scale(1.3);
 }
 h3{
   text-align:left;
@@ -86,7 +62,6 @@ h3{
   }
   h3{
   font-size: 1.5rem;
-
 }
 `
 const social=[
@@ -105,11 +80,11 @@ const Contact = ()=> {
         <h3>Let's Be friends,</h3>
     		<p>I love connecting with people and building real communities with real human beings. So, if you have room for one more friend, here’s where you can find me… 
         </p>
-        <ul className="social-icons">
+        <div className="social-icons">
           {social.map(({ icon, url }) => (
           <li key={url}><a href={url} target='_blank' rel='noopener noreferrer'>{icon}</a></li>
           ))}
-        </ul>
+        </div>
   		</Styles>
     </Row>
 		)

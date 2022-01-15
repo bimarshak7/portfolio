@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import {FaHome} from 'react-icons/fa';
 import {MdSchool} from 'react-icons/md';
 import {HiLightBulb} from 'react-icons/hi';
-import {Row} from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 
 const Styles=styled.div`
   width: 85% ;

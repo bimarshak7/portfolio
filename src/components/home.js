@@ -6,7 +6,6 @@ const Styles = styled.div`
     display: grid;
     justify-content: center;
     margin:35vh 0 10%;
-    background-image: #123 url('mast.jpeg') no-repeat fixed bottom center;
 
 .hey{
 	font:4vw 'Permanent Marker';
@@ -30,7 +29,7 @@ const Styles = styled.div`
 	padding:5px 7px;
 }
 .btm{
-	 font:2vw 'Architects Daughter';
+	 font:2.5vw 'Architects Daughter';
 	 font-weight:bold;
 	 background-color:#b90909a6;
 	 padding:0 3em;
@@ -46,16 +45,16 @@ const Styles = styled.div`
 	text-align:left;
 }
 @media screen and (max-width: 900px) {
-	margin-top:15vh;
+	margin-top:25vh;
   .btm {
-    font-size:1.7em;
+    font-size:5.7vw;
     margin-top:7%;
-    width:100%;
+    width:auto;
     white-space:nowrap;
     padding:0.1em 0em;
   }
   .name{font-size:9vw;}
-  .hey{margin-bottom:5%;left:50%;font-size:5vh;}
+  .hey{margin-bottom:5%;left:50%;font-size:7vw;}
   .how{font-size:1.5em;}
   .am{font-size:5vw} 
 }

@@ -7,7 +7,7 @@ const Styles=styled.div`
   margin:0% auto;
   padding:1em 0.5em;
   p{
-    font: 1.5rem 'Architects Daughter';
+    font-size: 1.2rem;
     margin:1% 0;
   }
   

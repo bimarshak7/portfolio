@@ -48,7 +48,7 @@ li{
 }
 h3{
   text-align:left;
-  font: 2.5rem Lobster;
+  font: 2.5rem '';
   margin-top:1%;
 }
   @media screen and (max-width: 650px) {

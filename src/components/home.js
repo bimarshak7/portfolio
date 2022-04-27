@@ -8,7 +8,7 @@ const Styles = styled.div`
     margin:35vh 0 10%;
 
 .hey{
-	font:4vw 'Permanent Marker';
+	font:4vw 'Gochi Hand';
 	line-height:1em;
 	background-color: #10fdd7;
   	color: black; 
@@ -29,18 +29,18 @@ const Styles = styled.div`
 	padding:5px 7px;
 }
 .btm{
-	 font:2.5vw 'Architects Daughter';
+	 font:2.5vw '';
 	 font-weight:bold;
 	 background-color:#b90909a6;
 	 padding:0 3em;
 	 text-align:center;
 }
 .how{
-	font:2em 'Lobster';
+	font:2em 'Gochi Hand';
 	text-align:center;
 }
 .am{
-	font:3vw 'Permanent Marker';
+	font:3vw 'Gochi Hand';
 	color:cyan;
 	text-align:left;
 }

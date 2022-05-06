@@ -89,6 +89,9 @@ function Top(){
                 duration={500}>Showcase</Link>
           </Nav.Item>
         </Nav>
+        <Navbar.Text>
+        <a className="nav-item" target="_blank" href="https://bimarshak.com.np">Blog</a>
+      </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
   </Styles >

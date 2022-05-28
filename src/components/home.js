@@ -6,9 +6,10 @@ const Styles = styled.div`
     display: grid;
     justify-content: center;
     margin:35vh 0 10%;
+    height:100%;
 
 .hey{
-	font:4vw 'Gochi Hand';
+	font-size:4vw;
 	line-height:1em;
 	background-color: #10fdd7;
   	color: black; 
@@ -22,7 +23,7 @@ const Styles = styled.div`
   	mix-blend-mode: screen;
 }
 .name{
-	font:7vw 'Gochi Hand';
+	font-size:7vw;
 	position:relative;
 	text-align:center;
 	display:inline-block;
@@ -62,9 +63,9 @@ const Styles = styled.div`
 
 function Home() {
 	return(
-		<Container c>
+		<Container>
 		<Styles id='home'>
-		<div className='hey'>HELLO!</div>
+		<div className='hey'>Namaste!</div>
 		<span className='how'>How's it going?</span>
 		<span className='am'>I am</span>
 		<span className='name'>Bimarsha Khanal.</span>

@@ -19,10 +19,9 @@ const Styles = styled.div`
   .nav-item{
     font:1.5rem 'Gochi Hand';
   }
- .nav-item a:hover{
-    border-bottom:3px ridge red;
-  }
+ 
   .active{
+    border-bottom:3px ridge red;
     border-bottom: 3px ridge cyan;
     color:white;
     

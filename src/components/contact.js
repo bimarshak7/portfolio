@@ -14,7 +14,7 @@ const Styles=styled.div`
   margin:0% auto;
   
   p{
-    font: 2.7rem 'Gochi Hand';
+    font: 2.7rem 'Kanit';
     margin:1% 0;
     word-spacing:18%;
     text-indent: 50px;
@@ -70,7 +70,7 @@ const social=[
   {icon:<FaStackOverflow/>,url:'https://stackoverflow.com/users/13677542/bimarsha-khanal'},
   {icon:<FaTwitterSquare/>,url:'https://twitter.com/bimarshak7'},
   {icon:<SiHackerrank/>,url:'https://www.hackerrank.com/khanalbimarsha7'},
-  {icon:<MdMail/>,url:'mailto:khanalbimarsha@gmail.com'}
+  {icon:<MdMail/>,url:'mailto:bimarsha.work@gmail.com'}
 ];
 const Contact = ()=> {
 	return(

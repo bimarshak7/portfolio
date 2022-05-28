@@ -16,7 +16,7 @@ const Styles=styled.div`
     max-width:25rem;
   }
   .card-title{
-    font: 1.7rem 'Gochi Hand';  
+    font: 1.7rem 'Arial';  
   }
   .card-header{
     background:black;

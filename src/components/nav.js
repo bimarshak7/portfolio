@@ -17,7 +17,7 @@ const Styles = styled.div`
     }
   }
   .nav-item{
-    font:1.5rem 'Gochi Hand';
+    font:1.5rem 'Kanit';
   }
  
   .active{
@@ -27,7 +27,7 @@ const Styles = styled.div`
     
   }
   .navbar-brand{
-  font-family: 'Gochi Hand', cursive;
+  font-family: 'Kanit';
   font-size: 1.9em;
 }
 @media screen and (max-width: 600px) {

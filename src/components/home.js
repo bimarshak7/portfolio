@@ -37,11 +37,11 @@ const Styles = styled.div`
 	 text-align:center;
 }
 .how{
-	font:2em 'Gochi Hand';
+	font:2em 'Kanit';
 	text-align:center;
 }
 .am{
-	font:3vw 'Gochi Hand';
+	font:3vw 'Kanit';
 	color:cyan;
 	text-align:left;
 }

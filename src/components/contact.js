@@ -16,8 +16,7 @@ const Styles=styled.div`
   p{
     font: 2.7rem 'Kanit';
     margin:1% 0;
-    word-spacing:18%;
-    text-indent: 50px;
+    text-indent: 15%;
     text-align:justify;
   }
  

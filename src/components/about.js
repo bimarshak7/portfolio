@@ -10,11 +10,12 @@ const Styles=styled.div`
   margin:0% auto;
   padding:1em 0.5em;
   p{
-    font: 1.7em 'Gochi Hand';
+    font: 1.6em 'Kanit';
     margin:1% 0;
-    word-spacing:28%;
   }
-  
+  .info{
+    text-indent:10%
+  }
   .line{
     border-right: 3px solid aqua;
     margin:3vh 3vw 1vh 0;
@@ -42,7 +43,7 @@ function About() {
     <Row className='content' id='about'>
   		<Styles>
     		<div className='title'>About Me</div>
-    		<p>I am a Computer Engineering Student. I love solving real world problems through my codes. I always strive to bring 100% to the work I do. I do have a great interest in Machine Learning and full stack development. 
+    		<p className='info'>I am a Computer Engineering Student. I love solving real world problems through my codes. I always strive to bring 100% to the work I do. I do have a great interest in Machine Learning and full stack development. 
         </p>
         <Row>
           <Col md>

@@ -10,8 +10,11 @@
 }
 
 .title{
-    font:3rem 'Gochi Hand';
+    font:3rem 'Kanit';
     text-align:center;
+    color: red;
+    text-decoration: underline wavy white;
+    font-style: italic;
 	}
 
 @media screen and (max-width: 650px) { 

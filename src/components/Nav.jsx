@@ -39,7 +39,15 @@ const Nav = () => {
 						</NavLink>
 					)
 				})}
-				<span>08 | Resume</span>
+				<span>
+					08 |{" "}
+					<a
+						href="https://drive.google.com/file/d/13dnCarlukKw7v6bz9H4UVirrxIk2xYAF/view?usp=sharing"
+						target="new"
+					>
+						Resume
+					</a>
+				</span>
 			</div>
 		</div>
 	)

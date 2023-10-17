@@ -1,0 +1,18 @@
+.centered-div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Source Code Pro", monospace;
+}
+
+.active span::before {
+	content: "> ";
+	color: magenta;
+	font-weight: bolder;
+}
+
+.contact h2:hover {
+	color: magenta;
+	scale: 1.02;
+}

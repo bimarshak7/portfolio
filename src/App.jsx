@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md"
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter as Router } from "react-router-dom"
 import { Route, Routes } from "react-router-dom"
 
 import "./App.css"
@@ -34,7 +34,7 @@ function App() {
 					<MdOutlineDarkMode fontSize={28} />
 				)}
 			</div>
-			<BrowserRouter>
+			<Router>
 				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full h-min lg:w-4/6 md:pl-8 pl-2">
 					<div
 						className={`md:w-2/3 md:pr-6 sm:pr-2 border-r ${
@@ -45,11 +45,14 @@ function App() {
 					</div>
 					<div className="w-full">
 						<Routes>
-							<Route path="" element={<Home />} />
-							<Route path="about" element={<About />} />
-							<Route path="skills" element={<Skills />} />
-							<Route path="contact" element={<Contact />} />
-							<Route path="experience" element={<Experience />} />
+							<Route path="/" element={<Home />} />
+							<Route path="/about" element={<About />} />
+							<Route path="/skills" element={<Skills />} />
+							<Route path="/contact" element={<Contact />} />
+							<Route
+								path="/experience"
+								element={<Experience />}
+							/>
 							<Route
 								path="achievements"
 								element={<Achievements />}
@@ -58,7 +61,7 @@ function App() {
 						</Routes>
 					</div>
 				</div>
-			</BrowserRouter>
+			</Router>
 		</div>
 	)
 }

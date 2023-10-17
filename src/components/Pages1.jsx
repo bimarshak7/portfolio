@@ -194,11 +194,11 @@ const Showcase = () => {
 					Nepali Handwriting Classification using ANN from scratch
 				</li>
 				<li>Social media app using Flask and ReactJS</li>
-				<li>
-					Web based shortest path visualizer Web based sudoku solver
-				</li>
+				<li>Web based shortest path visualizer and sudoku solver</li>
 			</ul>
-			Check my github repo for all these projects.
+			<h3 className="text-sm">
+				**Check my github repo for all these projects**
+			</h3>
 		</div>
 	)
 }

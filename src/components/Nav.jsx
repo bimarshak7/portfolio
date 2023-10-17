@@ -7,17 +7,18 @@ const Nav = () => {
 		"skills",
 		"contact",
 		"experience",
+		"achievements",
 		"showcase",
 	]
 
 	return (
 		<div className="flex flex-col gap-6 text-left md:pl-4">
 			<div>
-				<h2 className="text-3xl flex gap-1">
+				<h2 className="text-xl md:text-3xl flex gap-1 md:font-bold">
 					<span>#</span>Bimarsha Khanal
 				</h2>
 			</div>
-			<div className="flex flex-col gap-2 md:gap-4">
+			<div className="flex flex-col gap-2 md:gap-4 text-sm md:text-xl">
 				{links.map((link, i) => {
 					return (
 						<NavLink
@@ -38,7 +39,7 @@ const Nav = () => {
 						</NavLink>
 					)
 				})}
-				<span>07 | Resume</span>
+				<span>08 | Resume</span>
 			</div>
 		</div>
 	)

@@ -36,10 +36,12 @@ const About = () => {
 					Tribuvan Univerity, IOE <br />
 					Paschimanchal Campus
 				</h2>
-				Highly motivated with great self-learning and quick adapting
-				capability. Passionate about AI/ML,currently working to sharpen
-				Machine Learning skills and looking for opportunities to grow as
-				an AI professional.
+				<p className="leading-6">
+					Highly motivated final year student with great self-learning
+					and quick adapting capability. Passionate about
+					AI/ML,currently working to sharpen Machine Learning skills
+					and looking for opportunities to grow as an AI professional.
+				</p>
 			</div>
 		</div>
 	)
@@ -105,17 +107,39 @@ const Contact = () => {
 
 const Experience = () => {
 	return (
-		<div className="flex flex-col gap-6 text-left">
-			<h1>Experience</h1>
-			<h2>Bimarsha Khanal</h2>
+		<div className="flex flex-col gap-4 text-left">
+			<h1 className="font-bold">Experience</h1>
+			<div className="flex flex-col gap-1">
+				<h2 className="text-lg font-bold">Machine Learning Intern</h2>
+				<p className="text-base ml-3">
+					Dakshya AI <br />
+					Pokhara, Nepal
+					<br /> Aug 2023 - Sept 2023
+				</p>
+				<ul className="list-disc ml-4 text-base">
+					<li>
+						Worked with CTO to gain knowledge about existing AutoML
+						systems and their scopes especially in SaaS business.
+					</li>
+					<li>
+						Designed and Implement machine learning pipeline
+						consisting of data preprocessing, feature selection and
+						hyperparameter tuning to integrate into AutoML system
+					</li>
+					<li>
+						Developed a REST API using Flask enabling use of machine
+						learning services by rest of the system.
+					</li>
+				</ul>
+			</div>
 		</div>
 	)
 }
 
 const Showcase = () => {
 	return (
-		<div className="flex flex-col gap-6 text-left">
-			<h1>Showcase</h1>
+		<div className="flex flex-col gap-4 text-left">
+			<h1 className="font-bold">Showcase</h1>
 			<h2>Bimarsha Khanal</h2>
 		</div>
 	)

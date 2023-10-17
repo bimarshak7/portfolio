@@ -12,6 +12,7 @@ import {
 	Experience,
 	Showcase,
 	Skills,
+	Achievements,
 } from "./components/Pages1"
 
 function App() {
@@ -34,9 +35,9 @@ function App() {
 				)}
 			</div>
 			<BrowserRouter>
-				<div className="flex flex-row gap-4 md:gap-12 md:text-2xl centered-div w-full h-min lg:w-4/6 md:pl-8 pl-2">
+				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full h-min lg:w-4/6 md:pl-8 pl-2">
 					<div
-						className={`md:w-2/3 md:pr-6 sm:pr-4 border-r ${
+						className={`md:w-2/3 md:pr-6 sm:pr-2 border-r ${
 							theme ? "border-white" : "border-black"
 						}`}
 					>
@@ -49,6 +50,10 @@ function App() {
 							<Route path="skills" element={<Skills />} />
 							<Route path="contact" element={<Contact />} />
 							<Route path="experience" element={<Experience />} />
+							<Route
+								path="achievements"
+								element={<Achievements />}
+							/>
 							<Route path="showcase" element={<Showcase />} />
 						</Routes>
 					</div>

@@ -38,7 +38,7 @@ const Nav = () => {
 						</NavLink>
 					)
 				})}
-				<span>06 | Resume</span>
+				<span>07 | Resume</span>
 			</div>
 		</div>
 	)

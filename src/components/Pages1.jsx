@@ -6,19 +6,24 @@ import {
 	AiFillTwitterSquare,
 } from "react-icons/ai"
 import { BiSolidMedal } from "react-icons/bi"
+import { Link } from "react-router-dom"
 
 const Home = () => {
 	return (
-		<div className="flex flex-col gap-4 text-left">
-			<h1 className="font-bold text-2xl">Dear hooman,</h1>
-			<div className="indent-4 flex flex-col gap-2 text-xl">
-				<h1>नमस्ते !</h1>
+		<div className="flex flex-col gap-4 text-center">
+			<h1 className="text-2xl">Dear hooman,</h1>
+			<div className="indent-4 flex flex-col gap-2 text-xl font-bold">
+				<h1>नमस्ते ! </h1>
 				<h1>Hola !</h1>
 				<h1>Hello !</h1>
 				<h1>Bonjour !</h1>
 				<h1>Konnichiwa !</h1>
 			</div>
-			<h1 className="font-bold text-2xl">How you doin?</h1>
+			<h1 className="text-2xl font-serif">How you doin?</h1>
+			<h1 className="text-2xl">Explore my world</h1>
+			<h1 className="-mt-4 text-green-500 cursor-pointer text-5xl font-extrabold text-center">
+				<Link to="/about">▼</Link>
+			</h1>
 		</div>
 	)
 }
@@ -30,6 +35,7 @@ const About = () => {
 			<div className="md:text-lg text-sm flex flex-col gap-1">
 				<h2>Name: Bimarsha Khanal</h2>
 				<h2>Address: Pokhara, Nepal</h2>
+				<h2>I do: AI/ML, REST API</h2>
 				<h2>Education:</h2>
 				<h2 className="ml-4 md:text-base text-sm">
 					Computer Engineering(8th Sem)
@@ -71,7 +77,7 @@ const Skills = () => {
 const Contact = () => {
 	return (
 		<div className="flex flex-col gap-6 text-left contact text-sm md:text-lg">
-			<h1 className="font-bold text-xl sm:text-base">Contact</h1>
+			<h1 className="font-bold md:text-xl text-base">Contact</h1>
 			<h2 className="flex gap-2">
 				<AiFillMail fontSize={27} />
 				<a href="mailto:bimarsha.work@gmail.com">
@@ -102,6 +108,10 @@ const Contact = () => {
 					bimarshak7
 				</a>
 			</h2>
+			<h3 className="font-bold md:text-xl">
+				Drop a line, let's talk!{" "}
+				<span className="text-xl md:text-3xl">😉</span>
+			</h3>
 		</div>
 	)
 }

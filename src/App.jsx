@@ -21,7 +21,7 @@ function App() {
 	return (
 		<div
 			className={`w-screen h-screen ${
-				theme ? "bg-black text-white" : "bg-slate-100 text-black"
+				theme ? "bg-black text-white" : "bg-zinc-300 text-black"
 			}`}
 		>
 			<div

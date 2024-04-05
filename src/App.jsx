@@ -45,7 +45,7 @@ function App() {
 					</div>
 					<div className="w-3/5">
 						<Routes>
-							<Route path="/" element={<Home />} />
+							<Route path="/" element={<Home theme={theme}/>} />
 							<Route path="/about" element={<About />} />
 							<Route path="/skills" element={<Skills />} />
 							<Route path="/contact" element={<Contact />} />

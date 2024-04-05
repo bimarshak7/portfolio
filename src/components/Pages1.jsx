@@ -8,22 +8,19 @@ import {
 import { BiSolidMedal } from "react-icons/bi"
 import { Link } from "react-router-dom"
 
-const Home = () => {
+const Home = ({theme}) => {
 	return (
-		<div className="flex flex-col gap-4 text-center">
-			<h1 className="text-2xl">Dear hooman,</h1>
+		<div className="flex flex-col gap-4">
 			<div className="indent-4 flex flex-col gap-2 text-xl font-bold">
-				<h1>नमस्ते ! </h1>
+				{/*<h1>नमस्ते ! </h1>
 				<h1>Hola !</h1>
 				<h1>Hello !</h1>
 				<h1>Bonjour !</h1>
-				<h1>Konnichiwa !</h1>
+				<h1>Konnichiwa !</h1>*/}
+			<img src={`./src/components/${theme?"kitty.png":"kitty-light.png"}`}
+			className="w-fit"/>
 			</div>
-			<h1 className="text-2xl font-serif">How you doin?</h1>
-			<h1 className="text-2xl">Explore my world</h1>
-			<h1 className="-mt-4 text-green-500 cursor-pointer text-5xl font-extrabold text-center">
-				<Link to="/about">▼</Link>
-			</h1>
+			<h1 className="text-xl font-serif">Hey hooman! How you doin?</h1>
 		</div>
 	)
 }

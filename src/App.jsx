@@ -35,15 +35,15 @@ function App() {
 				)}
 			</div>
 			<Router>
-				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full h-min lg:w-4/6 md:pl-8 pl-2">
+				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full h-min lg:w-9/10 md:pl-8 pl-2">
 					<div
-						className={`md:w-2/3 md:pr-6 sm:pr-2 border-r ${
+						className={`w-max md:pr-6 md:ml-16 sm:pr-2 border-r ${
 							theme ? "border-white" : "border-black"
 						}`}
 					>
 						<Nav />
 					</div>
-					<div className="w-full">
+					<div className="w-3/5">
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/about" element={<About />} />

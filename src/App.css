@@ -9,6 +9,7 @@
 .active span::before {
 	content: "> ";
 	color: magenta;
+	font-size: 10px;
 	font-weight: bolder;
 }
 

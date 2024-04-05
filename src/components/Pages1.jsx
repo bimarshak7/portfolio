@@ -30,7 +30,7 @@ const Home = () => {
 
 const About = () => {
 	return (
-		<div className="flex flex-col gap-4 text-left">
+		<div className="flex flex-col gap-2 text-left">
 			<h1 className="text-2xl font-bold">About</h1>
 			<div className="md:text-lg text-sm flex flex-col gap-1">
 				<h2>Name: Bimarsha Khanal</h2>
@@ -38,10 +38,10 @@ const About = () => {
 				<h2>I do: AI/ML, REST API</h2>
 				<h2>Education:</h2>
 				<h2 className="ml-4 md:text-base text-sm">
-					Computer Engineering(8th Sem)
+					<i>Computer Engineering
 					<br />
 					Tribuvan Univerity, IOE <br />
-					Paschimanchal Campus
+					Paschimanchal Campus</i>
 				</h2>
 				<p className="leading-6 md:text-lg text-sm">
 					Highly motivated final year student with great self-learning

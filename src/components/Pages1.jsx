@@ -7,6 +7,8 @@ import {
 } from "react-icons/ai"
 import { BiSolidMedal } from "react-icons/bi"
 import { Link } from "react-router-dom"
+import LogoD from "./kitty.png"
+import LogoL from "./kitty-light.png"
 
 const Home = ({theme}) => {
 	return (
@@ -17,7 +19,7 @@ const Home = ({theme}) => {
 				<h1>Hello !</h1>
 				<h1>Bonjour !</h1>
 				<h1>Konnichiwa !</h1>*/}
-			<img src={`./src/components/${theme?"kitty.png":"kitty-light.png"}`}
+			<img src={theme?LogoD:LogoL}
 			className="w-fit"/>
 			</div>
 			<h1 className="text-xl font-serif">Hey hooman! How you doin?</h1>

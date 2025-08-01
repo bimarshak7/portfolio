@@ -21,7 +21,9 @@ function App() {
 	return (
 		<div
 			className={`relative w-screen h-screen overflow-x-hidden ${
-				theme ? "bg-black text-white" : "bg-white text-black"
+				theme
+				? "bg-gradient-to-br from-black via-zinc-900 to-gray-900 text-white backdrop-blur-xl backdrop-saturate-200 border border-white/10 shadow-2xl"
+				: "bg-gradient-to-br from-green-200 via-blue-100 to-yellow-100 text-gray-900"
 			}`}
 		>
 			{/* Theme Switch Button - always visible at top right */}

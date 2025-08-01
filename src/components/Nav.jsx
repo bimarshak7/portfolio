@@ -33,9 +33,9 @@ const Nav = ({ theme }) => {
 						className={({ isActive, isPending }) =>
 							isPending
 								? "pending"
-								: isActive
+							: isActive
 								? `relative flex items-center font-bold rounded-lg transition-all duration-200 px-3 py-1
-					${theme ? 'text-green-200 bg-green-800/30' : 'text-blue-700 bg-blue-100/80'}`
+								${theme ? 'text-green-200 bg-green-800/30' : 'text-blue-700 bg-blue-200/80 border border-blue-400'}`
 								: "cursor-pointer hover:text-green-500 flex items-center px-3 py-1"
 						}
 					>

@@ -132,20 +132,20 @@ const SectionTitle = ({ icon, title, accent = "green" }) => (
   </div>
 )
 
-const Skills = () => {
+const Skills = ({ theme }) => {
 	return (
-		<div className="flex flex-col gap-4 text-left pt-4">
+		<div className={`flex flex-col gap-4 text-left pt-4 rounded-lg shadow-lg p-6 transition-all duration-200 hover:shadow-2xl ${theme ? 'bg-zinc-800/60 text-white' : 'bg-gradient-to-br from-green-100 via-white to-green-200 text-green-900'}`}>
 			<SectionTitle icon={<FaCogs />} title="Skills" accent="green" />
 			<div className="grid md:grid-cols-2 gap-4">
 				{skillData.map((cat, idx) => (
-					<div key={cat.title} className="bg-zinc-800/60 hover:bg-zinc-700/80 transition-all duration-200 rounded-lg shadow-md p-4 flex flex-col gap-2 break-words overflow-hidden">
+					<div key={cat.title} className={`transition-all duration-200 rounded-lg shadow-md p-4 flex flex-col gap-2 break-words overflow-hidden ${theme ? 'bg-zinc-800/60 hover:bg-zinc-700/80' : 'bg-green-50 hover:bg-green-100'}`}>
 						<div className="flex items-center gap-2 text-lg font-semibold">
 							{cat.icon}
 							<span>{cat.title}</span>
 						</div>
 						<div className="flex flex-wrap gap-2 mt-1">
 							{cat.items.map((item, i) => (
-								<span key={i} className="bg-green-900/30 text-green-200 px-2 py-1 rounded text-xs md:text-sm font-mono whitespace-normal break-words">
+								<span key={i} className={`px-2 py-1 rounded text-xs md:text-sm font-mono whitespace-normal break-words ${theme ? 'bg-green-900/30 text-green-200' : 'bg-green-200 text-green-900'}`}>
 									{item}
 								</span>
 							))}
@@ -180,24 +180,24 @@ const Contact = ({ theme }) => {
 	)
 }
 
-const Experience = () => {
+const Experience = ({ theme }) => {
 	return (
-		<div className="flex flex-col gap-8 bg-gradient-to-br from-yellow-900/30 via-black/10 to-orange-900/20 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl">
+		<div className={`flex flex-col gap-8 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl ${theme ? 'bg-gradient-to-br from-yellow-900/30 via-black/10 to-orange-900/20 text-white' : 'bg-gradient-to-br from-yellow-50 via-white to-orange-50 text-yellow-800'}`}>
 			<SectionTitle icon={<FaCogs />} title="Experience" accent="yellow" />
 			{/* Experience Card 1 */}
-			<div className="bg-yellow-800/20 rounded-lg shadow-md p-5 flex flex-col gap-2 hover:scale-[1.01] hover:shadow-lg transition-transform duration-200 border-l-4 border-yellow-400">
+			<div className={`rounded-lg shadow-md p-5 flex flex-col gap-2 hover:scale-[1.01] hover:shadow-lg transition-transform duration-200 border-l-4 ${theme ? 'bg-yellow-800/20 border-yellow-400' : 'bg-yellow-50 border-yellow-300'}`}>
 				<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-					<div className="flex items-center gap-2 font-bold text-base md:text-lg text-yellow-200">
+					<div className={`flex items-center gap-2 font-bold text-base md:text-lg ${theme ? 'text-yellow-200' : 'text-yellow-900'}`}>
 						<span>Machine Learning Engineer</span>
-						<span className="hidden md:inline-block text-xs font-normal text-yellow-100">| Kathmandu, Nepal</span>
+						<span className={`hidden md:inline-block text-xs font-normal ${theme ? 'text-yellow-100' : 'text-yellow-700'}`}>| Kathmandu, Nepal</span>
 					</div>
-					<div className="flex items-center gap-2 text-sm md:text-base text-yellow-100 font-mono">
+					<div className={`flex items-center gap-2 text-sm md:text-base font-mono ${theme ? 'text-yellow-100' : 'text-yellow-700'}`}>
 						<span>Fusemachines</span>
 						<span className="hidden md:inline-block">|</span>
 						<span>March 2024 - Present</span>
 					</div>
 				</div>
-				<ul className="list-disc ml-6 mt-2 text-yellow-50 space-y-1 text-sm md:text-base">
+				<ul className={`list-disc ml-6 mt-2 space-y-1 text-sm md:text-base ${theme ? 'text-yellow-50' : 'text-yellow-900'}`}>
 					<li>Developed an AI-powered pipeline for key-value extraction from handwritten forms and financial documents, automating data processing and improving accuracy.</li>
 					<li>Designed, trained, and fine-tuned machine learning models, including document classifiers, language models, handwriting recognition systems and language transliteration models, to enhance automated data extraction, text recognition, and document categorization.</li>
 					<li>Built and deployed end-to-end ML systems with APIs for efficient parallel document processing.</li>
@@ -205,19 +205,19 @@ const Experience = () => {
 				</ul>
 			</div>
 			{/* Experience Card 2 */}
-			<div className="bg-yellow-800/10 rounded-lg shadow-md p-5 flex flex-col gap-2 hover:scale-[1.01] hover:shadow-lg transition-transform duration-200 border-l-4 border-yellow-300">
+			<div className={`rounded-lg shadow-md p-5 flex flex-col gap-2 hover:scale-[1.01] hover:shadow-lg transition-transform duration-200 border-l-4 ${theme ? 'bg-yellow-800/10 border-yellow-300' : 'bg-yellow-50 border-yellow-200'}`}>
 				<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-					<div className="flex items-center gap-2 font-bold text-base md:text-lg text-yellow-100">
+					<div className={`flex items-center gap-2 font-bold text-base md:text-lg ${theme ? 'text-yellow-100' : 'text-yellow-800'}`}>
 						<span>Machine Learning Intern</span>
-						<span className="hidden md:inline-block text-xs font-normal text-yellow-50">| Pokhara, Nepal</span>
+						<span className={`hidden md:inline-block text-xs font-normal ${theme ? 'text-yellow-50' : 'text-yellow-700'}`}>| Pokhara, Nepal</span>
 					</div>
-					<div className="flex items-center gap-2 text-sm md:text-base text-yellow-50 font-mono">
+					<div className={`flex items-center gap-2 text-sm md:text-base font-mono ${theme ? 'text-yellow-50' : 'text-yellow-700'}`}>
 						<span>Dakshya AI</span>
 						<span className="hidden md:inline-block">|</span>
 						<span>Aug 2023 - Sept 2023</span>
 					</div>
 				</div>
-				<ul className="list-disc ml-6 mt-2 text-yellow-50 space-y-1 text-sm md:text-base">
+				<ul className={`list-disc ml-6 mt-2 space-y-1 text-sm md:text-base ${theme ? 'text-yellow-50' : 'text-yellow-900'}`}>
 					<li>Worked with CTO to gain knowledge about existing AutoML systems and their scopes especially in SaaS business.</li>
 					<li>Designed and implemented machine learning pipeline consisting of data preprocessing, feature selection and hyperparameter tuning to integrate into AutoML system.</li>
 					<li>Developed a REST API using Flask enabling use of machine learning services by rest of the system.</li>
@@ -227,71 +227,61 @@ const Experience = () => {
 	)
 }
 
-const Achievements = () => {
+const Achievements = ({ theme }) => {
 	return (
-		<div className="flex flex-col md:flex-row gap-8 bg-gradient-to-br from-orange-900/30 via-black/10 to-yellow-900/20 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl">
+		<div className={`flex flex-col md:flex-row gap-8 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl ${theme ? 'bg-gradient-to-br from-orange-900/30 via-black/10 to-yellow-900/20 text-white' : 'bg-gradient-to-br from-orange-50 via-white to-yellow-50 text-orange-900'}`}>
 			<div className="flex-1 flex flex-col gap-4 justify-center">
 				<SectionTitle icon={<FaTrophy />} title="Achievements" accent="orange" />
-				<h2 className="text-lg md:text-xl font-bold text-orange-300 mb-2">Participations</h2>
+				<h2 className={`text-lg md:text-xl font-bold mb-2 ${theme ? 'text-orange-300' : 'text-orange-800'}`}>Participations</h2>
 				<ul className="md:text-base text-sm space-y-2">
-					<li className="flex items-center gap-2 bg-orange-800/30 rounded px-3 py-1">
-						Leapfrog Revampthon-2023 <BiSolidMedal className="text-[#c0c0c0] text-base md:text-2xl" />
-					</li>
-					<li className="flex items-center gap-2 bg-yellow-800/30 rounded px-3 py-1">
-						Ethos Hack (Cultural Hackathon)-2023 <BiSolidMedal className="text-yellow-500 text-xl md:text-2xl" />
-					</li>
-					<li className="flex items-center gap-2 bg-orange-800/30 rounded px-3 py-1">
-						Techparva Datathon-2023 <BiSolidMedal className="text-[#c0c0c0] text-base md:text-2xl" />
-					</li>
-					<li className="bg-orange-800/20 rounded px-3 py-1">Vertex Hacks Chapter Alpha-2023 (Finalist)</li>
-					<li className="bg-orange-800/20 rounded px-3 py-1">U-Tech Hackathon Alpha - 2022</li>
+					<li className={`flex items-center gap-2 rounded px-3 py-1 ${theme ? 'bg-orange-800/30' : 'bg-orange-100'}`}>Leapfrog Revampthon-2023 <BiSolidMedal className="text-[#c0c0c0] text-base md:text-2xl" /></li>
+					<li className={`flex items-center gap-2 rounded px-3 py-1 ${theme ? 'bg-yellow-800/30' : 'bg-yellow-100'}`}>Ethos Hack (Cultural Hackathon)-2023 <BiSolidMedal className="text-yellow-500 text-xl md:text-2xl" /></li>
+					<li className={`flex items-center gap-2 rounded px-3 py-1 ${theme ? 'bg-orange-800/30' : 'bg-orange-100'}`}>Techparva Datathon-2023 <BiSolidMedal className="text-[#c0c0c0] text-base md:text-2xl" /></li>
+					<li className={`${theme ? 'bg-orange-800/20' : 'bg-orange-50'} rounded px-3 py-1`}>Vertex Hacks Chapter Alpha-2023 (Finalist)</li>
+					<li className={`${theme ? 'bg-orange-800/20' : 'bg-orange-50'} rounded px-3 py-1`}>U-Tech Hackathon Alpha - 2022</li>
 				</ul>
-				<h2 className="text-lg md:text-xl font-bold text-orange-300 mt-6 mb-2">Involvements</h2>
+				<h2 className={`text-lg md:text-xl font-bold mt-6 mb-2 ${theme ? 'text-orange-300' : 'text-orange-800'}`}>Involvements</h2>
 				<ul className="ml-2 md:text-base text-sm list-disc space-y-2">
-					<li className="bg-orange-800/20 rounded px-3 py-1">Fusemachines AI Fellowship 2023</li>
-					<li className="bg-orange-800/20 rounded px-3 py-1">Leapfrog Student Partner -2023</li>
-					<li className="bg-orange-800/20 rounded px-3 py-1">Machine Learning Mentor -2023</li>
+					<li className={`${theme ? 'bg-orange-800/20' : 'bg-orange-50'} rounded px-3 py-1`}>Fusemachines AI Fellowship 2023</li>
+					<li className={`${theme ? 'bg-orange-800/20' : 'bg-orange-50'} rounded px-3 py-1`}>Leapfrog Student Partner -2023</li>
+					<li className={`${theme ? 'bg-orange-800/20' : 'bg-orange-50'} rounded px-3 py-1`}>Machine Learning Mentor -2023</li>
 				</ul>
-				<p className="indent-3 mt-2 text-orange-100 bg-orange-900/10 rounded px-3 py-2">
-					Volunteered as a mentor for a month-long Call for Enthusiast program, guiding juniors from my college in Machine Learning. We provided insights, support, and guidance to foster their learning and development.
-				</p>
+				<p className={`indent-3 mt-2 rounded px-3 py-2 ${theme ? 'text-orange-100 bg-orange-900/10' : 'text-orange-900 bg-orange-100'}`}>Volunteered as a mentor for a month-long Call for Enthusiast program, guiding juniors from my college in Machine Learning. We provided insights, support, and guidance to foster their learning and development.</p>
 			</div>
 			<div className="flex-1 flex flex-col items-center justify-center">
-				<div className="bg-orange-900/20 rounded-full p-6 shadow-lg animate-float">
-					<FaTrophy className="text-orange-400 text-6xl md:text-7xl" />
+				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-orange-900/20' : 'bg-orange-100'}`}>
+					<FaTrophy className={`${theme ? 'text-orange-400' : 'text-orange-700'} text-6xl md:text-7xl`} />
 				</div>
-				<span className="text-orange-200 text-sm mt-4">Proud moments & community impact!</span>
+				<span className={`text-sm mt-4 ${theme ? 'text-orange-200' : 'text-orange-800'}`}>Proud moments & community impact!</span>
 			</div>
 		</div>
 	)
 }
 
-const Showcase = () => {
+const Showcase = ({ theme }) => {
 	return (
-		<div className="flex flex-col md:flex-row gap-8 bg-gradient-to-br from-teal-900/30 via-black/10 to-blue-900/20 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl">
+		<div className={`flex flex-col md:flex-row gap-8 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl ${theme ? 'bg-gradient-to-br from-teal-900/30 via-black/10 to-blue-900/20 text-white' : 'bg-gradient-to-br from-teal-50 via-white to-blue-50 text-teal-900'}`}>
 			<div className="flex-1 flex flex-col gap-4 justify-center">
 				<SectionTitle icon={<FaFolderOpen />} title="Showcase" accent="teal" />
-				<p className="text-lg md:text-xl text-white/80 font-mono leading-relaxed mb-2">
-					A selection of my favorite projects and experiments in AI, ML, and software engineering. Explore the highlights below!
-				</p>
+				<p className={`text-lg md:text-xl font-mono leading-relaxed mb-2 ${theme ? 'text-white/80' : 'text-teal-900'}`}>A selection of my favorite projects and experiments in AI, ML, and software engineering. Explore the highlights below!</p>
 				<ul className="text-base md:text-lg list-disc space-y-2">
-					<li className="bg-teal-800/30 rounded px-3 py-1">Old photo restoration using GAN</li>
-					<li className="bg-teal-800/20 rounded px-3 py-1">Next word prediction using n-grams model (Nepali)</li>
-					<li className="bg-teal-800/30 rounded px-3 py-1">Extractive Nepali text summarizer using K-means clustering and word2vec embedding</li>
-					<li className="bg-teal-800/20 rounded px-3 py-1">Yoga Pose Classification using CNN</li>
-					<li className="bg-teal-800/30 rounded px-3 py-1">Nepali Cultural Dress and Ornaments Detection</li>
-					<li className="bg-teal-800/20 rounded px-3 py-1">Liver Cirrhosis Stage Prediction</li>
-					<li className="bg-teal-800/30 rounded px-3 py-1">Nepali Handwriting Classification using ANN from scratch</li>
-					<li className="bg-teal-800/20 rounded px-3 py-1">Social media app using Flask and ReactJS</li>
-					<li className="bg-teal-800/30 rounded px-3 py-1">Web based shortest path visualizer and sudoku solver</li>
+					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Old photo restoration using GAN</li>
+					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Next word prediction using n-grams model (Nepali)</li>
+					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Extractive Nepali text summarizer using K-means clustering and word2vec embedding</li>
+					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Yoga Pose Classification using CNN</li>
+					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Nepali Cultural Dress and Ornaments Detection</li>
+					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Liver Cirrhosis Stage Prediction</li>
+					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Nepali Handwriting Classification using ANN from scratch</li>
+					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Social media app using Flask and ReactJS</li>
+					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Web based shortest path visualizer and sudoku solver</li>
 				</ul>
 			</div>
 			<div className="flex-1 flex flex-col items-center justify-center">
-				<div className="bg-teal-900/20 rounded-full p-6 shadow-lg animate-float">
-					<FaFolderOpen className="text-teal-400 text-6xl md:text-7xl" />
+				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-teal-900/20' : 'bg-teal-100'}`}> 
+					<FaFolderOpen className={`${theme ? 'text-teal-400' : 'text-teal-700'} text-6xl md:text-7xl`} />
 				</div>
-				<span className="text-teal-300 text-s mt-6">Want to see more?</span>
-				<a href="https://github.com/bimarshak7" target="_blank" rel="noopener noreferrer" className="text-teal-200 text-xs underline hover:text-teal-400 transition-colors mt-1">Visit my GitHub</a>
+				<span className={`text-s mt-6 ${theme ? 'text-teal-300' : 'text-teal-800'}`}>Want to see more?</span>
+				<a href="https://github.com/bimarshak7" target="_blank" rel="noopener noreferrer" className={`text-xs underline transition-colors mt-1 ${theme ? 'text-teal-200 hover:text-teal-400' : 'text-teal-700 hover:text-teal-900'}`}>Visit my GitHub</a>
 			</div>
 		</div>
 	)

@@ -3,9 +3,9 @@ import {
 	AiFillPhone,
 	AiFillLinkedin,
 	AiFillGithub,
-	AiFillTwitterSquare,
 } from "react-icons/ai"
 import { BiSolidMedal } from "react-icons/bi"
+import { SiX } from "react-icons/si"
 import { Link } from "react-router-dom"
 import LogoD from "./kitty.png"
 import LogoL from "./kitty-light.png"
@@ -157,27 +157,24 @@ const Skills = () => {
 	)
 }
 
-const Contact = () => {
+const Contact = ({ theme }) => {
 	return (
-		<div className="flex flex-col md:flex-row gap-8 bg-gradient-to-br from-pink-900/30 via-black/10 to-blue-900/20 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl">
+		<div className={`flex flex-col md:flex-row gap-8 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl ${theme ? 'bg-gradient-to-br from-pink-900/30 via-black/10 to-blue-900/20 text-white' : 'bg-gradient-to-br from-pink-100 via-white to-blue-100 text-pink-900'}`}>
 			<div className="flex-1 flex flex-col gap-4 justify-center">
 				<SectionTitle icon={<FaEnvelope />} title="Contact" accent="pink" />
-				<p className="text-lg md:text-xl text-white/80 font-mono leading-relaxed">
-					Feel free to reach out for collaboration, mentorship, or just a friendly chat! I’m always open to new opportunities and connections.
-				</p>
-				<div className="flex flex-col gap-3 mt-2 text-base md:text-lg">
-					<a href="mailto:bimarsha.work@gmail.com" className="flex items-center gap-2 hover:text-pink-400 transition-colors"><AiFillMail fontSize={27} /> bimarsha.work@gmail.com</a>
-					<span className="flex items-center gap-2"><AiFillPhone /> +977 9840294181</span>
-					<a href="https://www.linkedin.com/in/bimarshakhanal/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-400 transition-colors"><AiFillLinkedin fontSize={26} /> bimarshakhanal</a>
-					<a href="https://www.github.com/bimarshak7/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-gray-300 transition-colors"><AiFillGithub fontSize={26} /> bimarshak7</a>
-					<a href="https://www.twitter.com/bimarshak7/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-300 transition-colors"><AiFillTwitterSquare fontSize={26} /> bimarshak7</a>
+				<p className={`text-lg md:text-xl font-mono leading-relaxed ${theme ? 'text-white/80' : 'text-pink-900'}`}>Feel free to reach out for collaboration, mentorship, or just a friendly chat! I’m always open to new opportunities and connections.</p>
+				<div className={`flex flex-col gap-3 mt-2 text-base md:text-lg ${theme ? 'text-white' : 'text-pink-900'}`}>
+					<a href="mailto:bimarsha.work@gmail.com" className="flex items-center gap-2 transition-colors"><AiFillMail fontSize={27} /> bimarsha.work@gmail.com</a>
+					<a href="https://www.linkedin.com/in/bimarshakhanal/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors"><AiFillLinkedin fontSize={26} /> bimarshakhanal</a>
+					<a href="https://www.github.com/bimarshak7/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors"><AiFillGithub fontSize={26} /> bimarshak7</a>
+					<a href="https://www.twitter.com/bimarshak7/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors"><SiX fontSize={26} /> bimarshak7</a>
 				</div>
 			</div>
 			<div className="flex-1 flex flex-col items-center justify-center">
-				<div className="bg-pink-900/20 rounded-full p-6 shadow-lg animate-float">
-					<FaEnvelope className="text-pink-400 text-6xl md:text-7xl" />
+				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-pink-900/20' : 'bg-pink-100'}`}>
+					<FaEnvelope className={`${theme ? 'text-pink-400' : 'text-pink-700'} text-6xl md:text-7xl`} />
 				</div>
-				<span className="text-pink-200 text-sm mt-4">Let’s connect and create something amazing!</span>
+				<span className={`text-sm mt-4 ${theme ? 'text-pink-200' : 'text-pink-800'}`}>Let’s connect and create something amazing!</span>
 			</div>
 		</div>
 	)

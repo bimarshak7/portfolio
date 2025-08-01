@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (min-width: 1024px) {
+  html, body {
+    overflow: hidden;
+  }
+  /* Removed #root positioning so only content is affected, not the whole app */
+}

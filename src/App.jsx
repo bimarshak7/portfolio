@@ -35,7 +35,7 @@ function App() {
 				)}
 			</div>
 			<Router>
-				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full h-min lg:w-9/10 md:pl-8 pl-2">
+				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full min-h-[80vh] items-center justify-center md:pl-8 pl-2 mt-[8vh]">
 					<div
 						className={`w-max md:pr-6 md:ml-16 sm:pr-2 border-r ${
 							theme ? "border-white" : "border-black"
@@ -43,7 +43,7 @@ function App() {
 					>
 						<Nav />
 					</div>
-					<div className="w-3/5">
+					<div className="w-3/5 flex items-center min-h-[50vh]">
 						<Routes>
 							<Route path="/" element={<Home theme={theme}/>} />
 							<Route path="/about" element={<About />} />

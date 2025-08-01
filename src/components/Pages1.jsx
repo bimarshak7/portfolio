@@ -24,10 +24,10 @@ const Home = ({ theme }) => {
 			</div>
 			<div className="flex flex-col items-center flex-1">
 				<img
-					src={theme ? LogoD : LogoL}
-					alt="Bimarsha Khanal"
-					className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-green-400 shadow-lg object-cover bg-white mb-2 animate-float"
-				/>
+	src={theme ? LogoD : LogoL}
+	alt="Bimarsha Khanal"
+	className={`w-64 h-64 md:w-80 md:h-80 rounded-full border-4 ${theme ? 'border-green-400' : 'border-blue-400'} shadow-lg object-cover bg-white mb-2 animate-float`}
+/>
 				<span className={`${theme ? 'text-green-200' : 'text-black'} text-sm mt-2`}>AI Enthusiast | Coder | Explorer</span>
 			</div>
 		</div>
@@ -50,7 +50,6 @@ const About = ({ theme }) => {
 				</div>
 				<div className="flex-1 flex flex-col gap-2 items-center">
 					<img src={theme ? LogoD : LogoL} alt="Bimarsha Khanal" className="w-32 h-32 rounded-full border-4 border-blue-400 shadow-md mb-2 bg-white object-cover" />
-					<span className={`text-xs ${theme ? 'text-blue-200' : 'text-blue-700'}`}>(That's me!)</span>
 				</div>
 			</div>
 			<div className={`mt-4 text-base md:text-lg leading-relaxed ${theme ? 'text-blue-100' : 'text-blue-900'}`}>

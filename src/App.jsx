@@ -20,12 +20,15 @@ function App() {
 
 	return (
 		<div
-			className={`w-screen h-screen ${
-				theme ? "bg-black text-white" : "bg-zinc-300 text-black"
+			className={`relative w-screen h-screen overflow-x-hidden ${
+				theme ? "bg-black text-white" : "bg-zinc-200 text-black"
 			}`}
 		>
+			{/* Theme Switch Button - always visible at top right */}
 			<div
-				className="pr-16 py-8 float-right cursor-pointer"
+				className={`fixed top-4 right-4 z-[9999] cursor-pointer rounded-full p-2 shadow-lg border transition-colors duration-200 ${
+					theme ? "bg-black/80 text-white border-white" : "bg-white/80 text-black border-black"
+				}`}
 				onClick={e => setTheme(!theme)}
 			>
 				{theme ? (
@@ -35,15 +38,15 @@ function App() {
 				)}
 			</div>
 			<Router>
-				<div className="flex flex-row gap-2 md:gap-12 md:text-2xl centered-div w-full min-h-[80vh] items-center justify-center md:pl-8 pl-2 mt-[8vh]">
+				<div className="flex flex-row w-full min-h-screen items-center justify-center">
 					<div
-						className={`w-max md:pr-6 md:ml-16 sm:pr-2 border-r ${
+						className={`flex flex-col justify-center items-center border-r pr-6 mr-2 ${
 							theme ? "border-white" : "border-black"
-						}`}
+						} h-full pt-8 px-4`}
 					>
 						<Nav />
 					</div>
-					<div className="w-3/5 flex items-center min-h-[50vh]">
+					<div className="w-1/2 flex items-center min-h-[60vh] pl-8 overflow-auto" style={{ maxHeight: '80vh' }}>
 						<Routes>
 							<Route path="/" element={<Home theme={theme}/>} />
 							<Route path="/about" element={<About />} />

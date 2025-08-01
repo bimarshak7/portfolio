@@ -13,11 +13,10 @@ const Nav = () => {
 	return (
 		<div className="flex flex-col gap-6 text-left md:pl-4">
 			<div>
-				<h2 className="text-xl md:text-3xl flex gap-1 md:font-bold">
-					<Link to="/">
-						<span>#</span>Bimarsha Khanal
-					</Link>
+				<h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 drop-shadow mb-2 tracking-wide uppercase text-center">
+					# Bimarsha Khanal
 				</h2>
+				<div className="border-b-2 border-green-400 w-2/3 mx-auto mb-4"></div>
 			</div>
 			<div className="flex flex-col gap-2 md:gap-4 text-sm md:text-xl">
 				{links.map((link, i) => {

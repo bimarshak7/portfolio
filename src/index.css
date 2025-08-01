@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+}
+
 @media (min-width: 1024px) {
   html, body {
     overflow: hidden;

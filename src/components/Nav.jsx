@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom"
 
-const Nav = () => {
+const Nav = ({ theme }) => {
 	const links = [
 		"about",
 		"contact",
@@ -14,7 +14,12 @@ const Nav = () => {
 		<div className="flex flex-col gap-6 text-left md:pl-4">
 			<div>
 				<Link to="/">
-					<h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 drop-shadow mb-2 tracking-wide uppercase text-center cursor-pointer">
+					<h2
+						className={`text-2xl md:text-3xl font-extrabold drop-shadow mb-2 tracking-wide uppercase text-center cursor-pointer bg-clip-text text-transparent 
+		${theme 
+			? "bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-indigo-500" 
+			: "bg-gradient-to-r from-blue-700 via-pink-500 to-green-500"}`}
+					>
 						Bimarsha Khanal
 					</h2>
 				</Link>

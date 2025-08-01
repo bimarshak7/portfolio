@@ -13,14 +13,10 @@ import { FaCode, FaRobot, FaCogs, FaDatabase, FaTools, FaServer, FaLightbulb, Fa
 
 const Home = ({ theme }) => {
 	return (
-		<div className="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-green-900/30 via-black/10 to-blue-900/20 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl">
+		<div className={`flex flex-col md:flex-row items-center gap-8 rounded-xl shadow-xl p-8 md:p-12 transition-all duration-300 hover:shadow-2xl ${theme ? 'bg-gradient-to-br from-green-900/30 via-black/10 to-blue-900/20 text-white' : 'bg-gradient-to-br from-white via-blue-50 to-green-100 text-black'}`}>
 			<div className="flex flex-col gap-4 items-start flex-1">
-				<h1 className="text-3xl md:text-5xl font-extrabold text-green-400 animate-pulse drop-shadow-lg">
-					Hey hooman! <span className="text-blue-400">How you doin?</span>
-				</h1>
-				<p className="text-lg md:text-2xl text-white/80 font-mono leading-relaxed">
-					Welcome to my digital space. I’m <span className="text-green-300 font-bold">Bimarsha Khanal</span>, a passionate <span className="text-blue-300 font-bold">Machine Learning Engineer</span> and creative problem solver. Dive in to explore my journey, skills, and projects!
-				</p>
+				<h1 className={`text-3xl md:text-5xl font-extrabold animate-pulse drop-shadow-lg ${theme ? 'text-green-400' : 'text-green-700'}`}>Hey hooman! <span className={`${theme ? 'text-blue-400' : 'text-blue-700'}`}>How you doin?</span></h1>
+				<p className={`text-lg md:text-2xl font-mono leading-relaxed ${theme ? 'text-white/80' : 'text-gray-800'}`}>Welcome to my digital space. I’m <span className={`${theme ? 'text-green-300 font-bold' : 'font-bold text-green-800'}`}>Bimarsha Khanal</span>, a passionate <span className={`${theme ? 'text-blue-300 font-bold' : 'font-bold text-blue-800'}`}>Machine Learning Engineer</span> and creative problem solver. Dive in to explore my journey, skills, and projects!</p>
 				<div className="flex gap-4 mt-2">
 					<a href="#/about" className="bg-green-700 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow transition-all duration-200">About Me</a>
 					<a href="#/showcase" className="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow transition-all duration-200">Showcase</a>
@@ -32,7 +28,7 @@ const Home = ({ theme }) => {
 					alt="Bimarsha Khanal"
 					className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-green-400 shadow-lg object-cover bg-white mb-2 animate-float"
 				/>
-				<span className="text-green-200 text-sm mt-2">AI Enthusiast | Coder | Explorer</span>
+				<span className={`${theme ? 'text-green-200' : 'text-black'} text-sm mt-2`}>AI Enthusiast | Coder | Explorer</span>
 			</div>
 		</div>
 	)

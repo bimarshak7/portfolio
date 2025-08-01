@@ -21,7 +21,7 @@ function App() {
 	return (
 		<div
 			className={`relative w-screen h-screen overflow-x-hidden ${
-				theme ? "bg-black text-white" : "bg-zinc-200 text-black"
+				theme ? "bg-black text-white" : "bg-white text-black"
 			}`}
 		>
 			{/* Theme Switch Button - always visible at top right */}
@@ -44,9 +44,9 @@ function App() {
 							theme ? "border-white" : "border-black"
 						} h-full pt-8 px-4`}
 					>
-						<Nav />
+						<Nav theme={theme}/>
 					</div>
-					<div className="w-1/2 flex items-start min-h-[60vh] pl-8 overflow-auto pt-4 custom-scrollbar" style={{ maxHeight: '80vh' }}>
+					<div className={`w-1/2 flex items-start min-h-[60vh] pl-8 overflow-auto pt-4 custom-scrollbar`} style={{ maxHeight: '80vh' }}>
 						<Routes>
 							<Route path="/" element={<Home theme={theme}/>} />
 							<Route path="/about" element={<About />} />

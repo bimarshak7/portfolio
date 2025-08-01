@@ -49,7 +49,7 @@ const About = ({ theme }) => {
 					</div>
 				</div>
 				<div className="flex-1 flex flex-col gap-2 items-center">
-					<img src={theme ? LogoD : LogoL} alt="Bimarsha Khanal" className="w-32 h-32 rounded-full border-4 border-blue-400 shadow-md mb-2 bg-white object-cover" />
+					<img src={theme ? LogoD : LogoL} alt="Bimarsha Khanal" className="w-32 h-32 rounded-full border-4 border-blue-400 shadow-md mb-2 bg-white object-cover hidden sm:block" />
 				</div>
 			</div>
 			<div className={`mt-4 text-base md:text-lg leading-relaxed ${theme ? 'text-blue-100' : 'text-blue-900'}`}>

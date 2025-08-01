@@ -39,25 +39,37 @@ function App() {
 					<MdOutlineDarkMode fontSize={28} />
 				)}
 			</div>
+			<div className="w-full flex md:hidden justify-center items-center pt-4 pb-2">
+				<h2
+					className={`text-xl font-extrabold drop-shadow tracking-wide uppercase text-center cursor-pointer bg-clip-text text-transparent \
+					${theme 
+						? "bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-indigo-500" 
+						: "bg-gradient-to-r from-blue-700 via-pink-500 to-green-500"}`}
+				>
+					# Bimarsha Khanal
+				</h2>
+			</div>
 			<Router>
 				<div className="flex flex-row w-full min-h-screen items-center justify-center">
 					<div
-						className={`flex flex-col justify-center items-center border-r pr-6 mr-2 ${
-							theme ? "border-white" : "border-black"
-						} h-full pt-8 px-4`}
+						className={`flex flex-col justify-center items-center md:border-r md:pr-6 md:mr-2 ${
+							theme ? "md:border-white" : "md:border-black"
+						} h-full pt-8 px-2`}
 					>
 						<Nav theme={theme}/>
 					</div>
-					<div className={`w-1/2 flex items-start min-h-[60vh] pl-8 overflow-auto pt-4 custom-scrollbar`} style={{ maxHeight: '80vh' }}>
-						<Routes>
-							<Route path="/" element={<Home theme={theme}/>} />
-							<Route path="/about" element={<About theme={theme}/>} />
-							<Route path="/skills" element={<Skills theme={theme}/>} />
-							<Route path="/contact" element={<Contact theme={theme}/>} />
-							<Route path="/experience" element={<Experience theme={theme}/>} />
-							<Route path="/achievements" element={<Achievements theme={theme}/>} />
-							<Route path="/showcase" element={<Showcase theme={theme}/>} />
-						</Routes>
+					<div className={`w-full md:w-1/2 flex items-start min-h-[60vh] px-2 md:pl-8 overflow-auto pt-4 custom-scrollbar`} style={{ maxHeight: '80vh' }}>
+						<div className="w-full">
+							<Routes>
+								<Route path="/" element={<Home theme={theme}/>} />
+								<Route path="/about" element={<About theme={theme}/>} />
+								<Route path="/skills" element={<Skills theme={theme}/>} />
+								<Route path="/contact" element={<Contact theme={theme}/>} />
+								<Route path="/experience" element={<Experience theme={theme}/>} />
+								<Route path="/achievements" element={<Achievements theme={theme}/>} />
+								<Route path="/showcase" element={<Showcase theme={theme}/>} />
+							</Routes>
+						</div>
 					</div>
 				</div>
 			</Router>

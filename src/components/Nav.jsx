@@ -131,21 +131,21 @@ const Nav = ({ theme }) => {
 			)}
 
 			{/* Desktop nav */}
-			<div className="hidden md:flex flex-col gap-6 text-left md:pl-4">
+			<div className="hidden md:flex flex-col gap-6 text-left">
 				<div>
 					<Link to="/">
 						<h2
-							className={`text-2xl md:text-3xl font-extrabold drop-shadow mb-2 tracking-wide uppercase text-center cursor-pointer bg-clip-text text-transparent 
-			${theme 
-				? "bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-indigo-500" 
-				: "bg-gradient-to-r from-blue-700 via-pink-500 to-green-500"}`}
+							className={`text-xl md:text-2xl font-extrabold drop-shadow mb-2 tracking-wide uppercase text-center cursor-pointer bg-clip-text text-transparent 
+				${theme 
+					? "bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-indigo-500" 
+					: "bg-gradient-to-r from-blue-700 via-pink-500 to-green-500"}`}
 						>
 							# Bimarsha Khanal
 						</h2>
 					</Link>
 					<div className="border-b-2 border-green-400 w-2/3 mx-auto mb-4"></div>
 				</div>
-				<div className="flex flex-col gap-2 md:gap-4 text-sm md:text-xl">
+				<div className="flex flex-col gap-2 md:gap-4 text-xs md:text-lg">
 					{links.map((link, i) => (
 						<NavLink
 							to={link == "home" ? "" : link}

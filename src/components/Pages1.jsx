@@ -34,26 +34,26 @@ const Home = ({ theme }) => {
 	)
 }
 
-const About = () => {
+const About = ({ theme }) => {
 	return (
-		<div className="flex flex-col gap-4 text-left bg-blue-900/10 rounded-lg shadow-lg p-6 transition-all duration-200 hover:shadow-2xl">
+		<div className={`flex flex-col gap-4 text-left rounded-lg shadow-lg p-6 transition-all duration-200 hover:shadow-2xl ${theme ? 'bg-blue-900/10 text-white' : 'bg-gradient-to-br from-blue-100 via-white to-blue-200 text-blue-900'}`}>
 			<SectionTitle icon={<FaUserGraduate />} title="About" accent="blue" />
 			<div className="flex flex-col md:flex-row gap-6 items-start">
 				<div className="flex-1 flex flex-col gap-2">
-					<h2 className="text-2xl font-bold text-blue-300 mb-1">Bimarsha Khanal</h2>
-					<p className="text-base md:text-lg text-blue-100 font-mono">AI/ML Engineer | Researcher | Problem Solver</p>
+					<h2 className={`text-2xl font-bold mb-1 ${theme ? 'text-blue-300' : 'text-blue-800'}`}>Bimarsha Khanal</h2>
+					<p className={`text-base md:text-lg font-mono ${theme ? 'text-blue-100' : 'text-blue-900'}`}>AI/ML Engineer | Researcher | Problem Solver</p>
 					<div className="flex flex-wrap gap-4 mt-2">
-						<span className="bg-blue-800/40 text-blue-200 px-3 py-1 rounded-full text-xs font-semibold">Pokhara, Nepal</span>
-						<span className="bg-blue-800/40 text-blue-200 px-3 py-1 rounded-full text-xs font-semibold">Computer Engineering</span>
-						<span className="bg-blue-800/40 text-blue-200 px-3 py-1 rounded-full text-xs font-semibold">Tribhuvan University, IOE</span>
+						<span className={`px-3 py-1 rounded-full text-xs font-semibold ${theme ? 'bg-blue-800/40 text-blue-200' : 'bg-blue-200 text-blue-800'}`}>Pokhara, Nepal</span>
+						<span className={`px-3 py-1 rounded-full text-xs font-semibold ${theme ? 'bg-blue-800/40 text-blue-200' : 'bg-blue-200 text-blue-800'}`}>Computer Engineering</span>
+						<span className={`px-3 py-1 rounded-full text-xs font-semibold ${theme ? 'bg-blue-800/40 text-blue-200' : 'bg-blue-200 text-blue-800'}`}>Tribhuvan University, IOE</span>
 					</div>
 				</div>
 				<div className="flex-1 flex flex-col gap-2 items-center">
-					<img src={LogoD} alt="Bimarsha Khanal" className="w-32 h-32 rounded-full border-4 border-blue-400 shadow-md mb-2 bg-white object-cover" />
-					<span className="text-xs text-blue-200">(That's me!)</span>
+					<img src={theme ? LogoD : LogoL} alt="Bimarsha Khanal" className="w-32 h-32 rounded-full border-4 border-blue-400 shadow-md mb-2 bg-white object-cover" />
+					<span className={`text-xs ${theme ? 'text-blue-200' : 'text-blue-700'}`}>(That's me!)</span>
 				</div>
 			</div>
-			<div className="mt-4 text-base md:text-lg text-blue-100 leading-relaxed">
+			<div className={`mt-4 text-base md:text-lg leading-relaxed ${theme ? 'text-blue-100' : 'text-blue-900'}`}>
 				<p>
 					I am a passionate and driven Machine Learning Engineer with a strong foundation in computer engineering and a love for solving real-world problems using AI. My journey in tech began with curiosity and has grown into a deep commitment to research, innovation, and collaborative development.
 				</p>

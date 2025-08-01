@@ -49,18 +49,12 @@ function App() {
 					<div className={`w-1/2 flex items-start min-h-[60vh] pl-8 overflow-auto pt-4 custom-scrollbar`} style={{ maxHeight: '80vh' }}>
 						<Routes>
 							<Route path="/" element={<Home theme={theme}/>} />
-							<Route path="/about" element={<About />} />
-							<Route path="/skills" element={<Skills />} />
-							<Route path="/contact" element={<Contact />} />
-							<Route
-								path="/experience"
-								element={<Experience />}
-							/>
-							<Route
-								path="achievements"
-								element={<Achievements />}
-							/>
-							<Route path="showcase" element={<Showcase />} />
+							<Route path="/about" element={<About theme={theme}/>} />
+							<Route path="/skills" element={<Skills theme={theme}/>} />
+							<Route path="/contact" element={<Contact theme={theme}/>} />
+							<Route path="/experience" element={<Experience theme={theme}/>} />
+							<Route path="/achievements" element={<Achievements theme={theme}/>} />
+							<Route path="/showcase" element={<Showcase theme={theme}/>} />
 						</Routes>
 					</div>
 				</div>

@@ -63,7 +63,7 @@ const About = ({ theme }) => {
 					<li>Active contributor to open-source and tech communities, always eager to learn and share knowledge.</li>
 				</ul>
 				<p className="mt-2">
-					When I’m not coding, you’ll find me exploring new research papers, mentoring juniors, or enjoying the natural beauty of Nepal.
+				Away from the keyboard, I stay inspired by reading research papers and exploring the natural wonders of Nepal.
 				</p>
 			</div>
 		</div>
@@ -170,10 +170,10 @@ const Contact = ({ theme }) => {
 				</div>
 			</div>
 			<div className="flex-1 flex flex-col items-center justify-center md:max-w-[180px]">
-				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-pink-900/20' : 'bg-pink-100'}`}>
+				<div className={`flex flex-col items-center justify-center rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-pink-900/20' : 'bg-pink-100'}`}> 
 					<FaEnvelope className={`${theme ? 'text-pink-400' : 'text-pink-700'} text-6xl md:text-7xl`} />
 				</div>
-				<span className={`text-sm mt-4 ${theme ? 'text-pink-200' : 'text-pink-800'}`}>Let’s connect and create something amazing!</span>
+				<span className={`text-sm mt-4 text-center ${theme ? 'text-pink-200' : 'text-pink-800'}`}>Let’s connect and create something amazing!</span>
 			</div>
 		</div>
 	)
@@ -248,14 +248,53 @@ const Achievements = ({ theme }) => {
 				<p className={`indent-3 mt-2 rounded px-3 py-2 ${theme ? 'text-orange-100 bg-orange-900/10' : 'text-orange-900 bg-orange-100'}`}>Volunteered as a mentor for a month-long Call for Enthusiast program, guiding juniors from my college in Machine Learning. We provided insights, support, and guidance to foster their learning and development.</p>
 			</div>
 			<div className="flex-1 flex flex-col items-center justify-center md:max-w-[180px]">
-				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-orange-900/20' : 'bg-orange-100'}`}>
+				<div className={`flex flex-col items-center justify-center rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-orange-900/20' : 'bg-orange-100'}`}> 
 					<FaTrophy className={`${theme ? 'text-orange-400' : 'text-orange-700'} text-6xl md:text-7xl`} />
 				</div>
-				<span className={`text-sm mt-4 ${theme ? 'text-orange-200' : 'text-orange-800'}`}>Proud moments & community impact!</span>
+				<span className={`text-sm mt-4 text-center ${theme ? 'text-orange-200' : 'text-orange-800'}`}>Proud moments & community impact!</span>
 			</div>
 		</div>
 	)
 }
+
+const showcaseProjects = [
+	{
+		name: "Old photo restoration using GAN",
+		link: "https://github.com/bimarshak7/GAN-image-restore"
+	},
+	{
+		name: "Next word prediction using n-grams model (Nepali)",
+		link: "https://github.com/bimarshak7/Nepali-n-grams-model"
+	},
+	{
+		name: "Extractive Nepali text summarizer using K-means clustering and word2vec embedding",
+		link: "https://github.com/bimarshak7/nepali_text_summarizer"
+	},
+	{
+		name: "Chatbots Using Seq2Seq and Transformers",
+		link: "https://github.com/bimarshak7/chat-bots"
+	},
+	{
+		name: "Nepali Cultural Dress and Ornaments Detection",
+		link: "https://github.com/0xs3gfau1t/EthnoAttire"
+	},
+	{
+		name: "Liver Cirrhosis Stage Prediction",
+		link: "https://github.com/bimarshak7/liver-cirrhosis-prediction"
+	},
+	{
+		name: "Nepali Handwriting Classification using ANN from scratch",
+		link: "https://github.com/bimarshak7/Nepali-Handwritten-Digit-Classification"
+	},
+	{
+		name: "Social media app using Flask and ReactJS",
+		link: "https://github.com/bimarshak7/instapound"
+	},
+	{
+		name: "Web based shortest path visualizer and sudoku solver",
+		link: "https://github.com/bimarshak7/shortest-path-finder"
+	},
+]
 
 const Showcase = ({ theme }) => {
 	return (
@@ -264,22 +303,23 @@ const Showcase = ({ theme }) => {
 				<SectionTitle icon={<FaFolderOpen />} title="Showcase" accent="teal" />
 				<p className={`text-lg md:text-xl font-mono leading-relaxed mb-2 ${theme ? 'text-white/80' : 'text-teal-900'}`}>A selection of my favorite projects and experiments in AI, ML, and software engineering. Explore the highlights below!</p>
 				<ul className="text-base md:text-lg list-disc space-y-2">
-					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Old photo restoration using GAN</li>
-					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Next word prediction using n-grams model (Nepali)</li>
-					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Extractive Nepali text summarizer using K-means clustering and word2vec embedding</li>
-					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Yoga Pose Classification using CNN</li>
-					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Nepali Cultural Dress and Ornaments Detection</li>
-					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Liver Cirrhosis Stage Prediction</li>
-					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Nepali Handwriting Classification using ANN from scratch</li>
-					<li className={`${theme ? 'bg-teal-800/20 text-white' : 'bg-teal-50 text-teal-900'} rounded px-3 py-1`}>Social media app using Flask and ReactJS</li>
-					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Web based shortest path visualizer and sudoku solver</li>
+					{showcaseProjects.map((project, i) => (
+						<li
+							key={project.name}
+							onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
+							className={`${theme ? (i%2===0 ? 'bg-teal-800/30 text-white' : 'bg-teal-800/20 text-white') : (i%2===0 ? 'bg-teal-100 text-teal-900' : 'bg-teal-50 text-teal-900')} rounded px-3 py-1 transition-all duration-300 ease-out hover:scale-105 hover:bg-teal-500/40 hover:text-white shadow-sm cursor-pointer`}
+							title={project.name}
+						>
+							{project.name}
+						</li>
+					))}
 				</ul>
 			</div>
 			<div className="flex-1 flex flex-col items-center justify-center md:max-w-[180px]">
-				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-teal-900/20' : 'bg-teal-100'}`}> 
+				<div className={`flex flex-col items-center justify-center rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-teal-900/20' : 'bg-teal-100'}`}> 
 					<FaFolderOpen className={`${theme ? 'text-teal-400' : 'text-teal-700'} text-6xl md:text-7xl`} />
 				</div>
-				<span className={`text-s mt-6 ${theme ? 'text-teal-300' : 'text-teal-800'}`}>Want to see more?</span>
+				<span className={`text-s mt-6 text-center ${theme ? 'text-teal-300' : 'text-teal-800'}`}>Want to see more?</span>
 				<a href="https://github.com/bimarshak7" target="_blank" rel="noopener noreferrer" className={`text-xs underline transition-colors mt-1 ${theme ? 'text-teal-200 hover:text-teal-400' : 'text-teal-700 hover:text-teal-900'}`}>Visit my GitHub</a>
 			</div>
 		</div>

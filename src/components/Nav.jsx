@@ -20,7 +20,7 @@ const Nav = ({ theme }) => {
 			? "bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-indigo-500" 
 			: "bg-gradient-to-r from-blue-700 via-pink-500 to-green-500"}`}
 					>
-						Bimarsha Khanal
+						# Bimarsha Khanal
 					</h2>
 				</Link>
 				<div className="border-b-2 border-green-400 w-2/3 mx-auto mb-4"></div>

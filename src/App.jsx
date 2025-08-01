@@ -46,7 +46,7 @@ function App() {
 					>
 						<Nav />
 					</div>
-					<div className="w-1/2 flex items-center min-h-[60vh] pl-8 overflow-auto" style={{ maxHeight: '80vh' }}>
+					<div className="w-1/2 flex items-start min-h-[60vh] pl-8 overflow-auto pt-4 custom-scrollbar" style={{ maxHeight: '80vh' }}>
 						<Routes>
 							<Route path="/" element={<Home theme={theme}/>} />
 							<Route path="/about" element={<About />} />

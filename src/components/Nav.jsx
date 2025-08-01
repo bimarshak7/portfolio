@@ -26,27 +26,30 @@ const Nav = ({ theme }) => {
 				<div className="border-b-2 border-green-400 w-2/3 mx-auto mb-4"></div>
 			</div>
 			<div className="flex flex-col gap-2 md:gap-4 text-sm md:text-xl">
-				{links.map((link, i) => {
-					return (
-						<NavLink
-							to={link == "home" ? "" : link}
-							key={i}
-							className={({ isActive, isPending }) =>
-								isPending
-									? "pending"
-									: isActive
-									? "active"
-									: "cursor-pointer hover:text-green-500"
-							}
-						>
-							<span>
-								0{i + 1} |{" "}
-								{link.charAt(0).toUpperCase() + link.slice(1)}
+				{links.map((link, i) => (
+					<NavLink
+						to={link == "home" ? "" : link}
+						key={i}
+						className={({ isActive, isPending }) =>
+							isPending
+								? "pending"
+								: isActive
+								? `relative flex items-center font-bold rounded-lg transition-all duration-200 px-3 py-1
+					${theme ? 'text-green-200 bg-green-800/30' : 'text-blue-700 bg-blue-100/80'}`
+								: "cursor-pointer hover:text-green-500 flex items-center px-3 py-1"
+						}
+					>
+						{({ isActive }) => (
+							<span className="flex items-center gap-2 min-h-[2rem]">
+								{isActive && <span className={`w-2 h-2 rounded-full mr-2 ${theme ? 'bg-green-300 shadow-lg' : 'bg-blue-500 shadow-md'}`}></span>}
+								0{i + 1} | {link.charAt(0).toUpperCase() + link.slice(1)}
 							</span>
-						</NavLink>
-					)
-				})}
-				<span className="hover:text-green-500">
+						)}
+					</NavLink>
+				))}
+				<span className="flex items-center font-bold rounded-lg transition-all duration-200 cursor-pointer hover:text-green-500 gap-2 px-3 py-1 min-h-[2rem] ml-0">
+					{/* Invisible dot for alignment, but remove margin to match others */}
+					<span className="w-2 h-2 mr-2 opacity-0" />
 					07 |{" "}
 					<a
 						href="https://drive.google.com/file/d/13dnCarlukKw7v6bz9H4UVirrxIk2xYAF/view?usp=sharing"
@@ -55,7 +58,8 @@ const Nav = ({ theme }) => {
 						Resume
 					</a>
 				</span>
-				<span className="hover:text-green-500">
+				<span className="flex items-center font-bold rounded-lg transition-all duration-200 cursor-pointer hover:text-green-500 gap-2 px-3 py-1 min-h-[2rem] ml-0">
+					<span className="w-2 h-2 mr-2 opacity-0" />
 					08 |{" "}
 					<a href="https://bimarshak.com.np" target="new">
 						Blog

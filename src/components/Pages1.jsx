@@ -170,7 +170,7 @@ const Contact = ({ theme }) => {
 					<a href="https://www.twitter.com/bimarshak7/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors"><SiX fontSize={26} /> bimarshak7</a>
 				</div>
 			</div>
-			<div className="flex-1 flex flex-col items-center justify-center">
+			<div className="flex-1 flex flex-col items-center justify-center md:max-w-[180px]">
 				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-pink-900/20' : 'bg-pink-100'}`}>
 					<FaEnvelope className={`${theme ? 'text-pink-400' : 'text-pink-700'} text-6xl md:text-7xl`} />
 				</div>
@@ -248,7 +248,7 @@ const Achievements = ({ theme }) => {
 				</ul>
 				<p className={`indent-3 mt-2 rounded px-3 py-2 ${theme ? 'text-orange-100 bg-orange-900/10' : 'text-orange-900 bg-orange-100'}`}>Volunteered as a mentor for a month-long Call for Enthusiast program, guiding juniors from my college in Machine Learning. We provided insights, support, and guidance to foster their learning and development.</p>
 			</div>
-			<div className="flex-1 flex flex-col items-center justify-center">
+			<div className="flex-1 flex flex-col items-center justify-center md:max-w-[180px]">
 				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-orange-900/20' : 'bg-orange-100'}`}>
 					<FaTrophy className={`${theme ? 'text-orange-400' : 'text-orange-700'} text-6xl md:text-7xl`} />
 				</div>
@@ -276,7 +276,7 @@ const Showcase = ({ theme }) => {
 					<li className={`${theme ? 'bg-teal-800/30 text-white' : 'bg-teal-100 text-teal-900'} rounded px-3 py-1`}>Web based shortest path visualizer and sudoku solver</li>
 				</ul>
 			</div>
-			<div className="flex-1 flex flex-col items-center justify-center">
+			<div className="flex-1 flex flex-col items-center justify-center md:max-w-[180px]">
 				<div className={`rounded-full p-6 shadow-lg animate-float ${theme ? 'bg-teal-900/20' : 'bg-teal-100'}`}> 
 					<FaFolderOpen className={`${theme ? 'text-teal-400' : 'text-teal-700'} text-6xl md:text-7xl`} />
 				</div>
